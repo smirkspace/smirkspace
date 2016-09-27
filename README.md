@@ -20,7 +20,7 @@ Tim Baker [tbakerx@gmail.com]
 
 Bridget Rassell [bridget.rassell@gmail.com]
 
-## Live Demo Link ##
+## Live Demo Link/Video Link ##
 
 ## Resources/Documentation ##
 

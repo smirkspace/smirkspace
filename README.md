@@ -1,4 +1,4 @@
-
+[smirk_logo](https://drive.google.com/open?id=0Bwm6BkzE8IznV2hEZTlVdXRwYVU)
 
 ## Description ##
 

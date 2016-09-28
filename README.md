@@ -28,6 +28,8 @@ Bridget Rassell [bridget.rassell@gmail.com]
 
 [Slack] (https://startup-programming.slack.com/)
 
+[Trello](https://trello.com/smirkspace)
+
 [Our Wiki](https://github.com/smirkspace/smirkspace/wiki)
 
 [BackHub](https://backhub.co)

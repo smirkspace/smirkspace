@@ -34,4 +34,3 @@ Bridget Rassell [bridget.rassell@gmail.com]
 
 ## Contact us! ##
 You can reach us at smirkspace@gmail.com, feel free to provide us with feedback or any concerns
-

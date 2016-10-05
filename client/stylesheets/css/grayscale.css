@@ -101,6 +101,8 @@ a:focus {
 .navbar-custom .nav li.active a:hover {
   color: white;
 }
+
+
 @media (min-width: 768px) {
   .navbar-custom {
     padding: 20px 0;
@@ -125,7 +127,7 @@ a:focus {
   text-align: center;
   color: white;
   text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
-  background: url(images/intro-bg.jpg) no-repeat bottom center scroll;
+  background: url(images/starsbackground.jpg) no-repeat bottom center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;

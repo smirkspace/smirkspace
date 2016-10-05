@@ -125,7 +125,7 @@ a:focus {
   text-align: center;
   color: white;
   text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
-  background: url(../../../public/images/intro-bg.jpg) no-repeat bottom center scroll;
+  background: url(images/intro-bg.jpg) no-repeat bottom center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -226,7 +226,7 @@ a:focus {
   padding: 50px 0;
   color: white;
   text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
-  background: url(../../../public/images/downloads-bg.jpg) no-repeat center center scroll;
+  background: url(images/downloads-bg.jpg) no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;

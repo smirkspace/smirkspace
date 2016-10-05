@@ -1,18 +1,10 @@
 {
   "name": "smirkspace",
-  "title": "Smirkspace",
-  "version": "3.3.7+1",
-  "homepage": "http://startbootstrap.com/template-overviews/grayscale",
-  "author": "Start Bootstrap",
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE",
-    "private": true,
-    "scripts": {
-      "start": "meteor run"
-    },
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
   },
-  "devDependencies": {
+  "dependencies": {
     "meteor-node-stubs": "~0.2.0",
     "bootstrap": "^3.3.7",
     "browser-sync": "^2.13.0",
@@ -24,10 +16,5 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.4",
     "jquery": "^1.11.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale.git"
   }
-
 }

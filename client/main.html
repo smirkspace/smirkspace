@@ -72,15 +72,45 @@
                         <h1 class="brand-heading">SmirkSpace</h1>
                         <p class="intro-text">Helping you connect with students near you!
                             <br>Find your space.</p>
-                            <button type="button" class="btn btn-start" href="#about">Sign Up</button>
-                            <button type="button" class="btn btn-start" data-toggle="modal">Log In</button>
+                            <button type="button" class="btn btn-start" data-toggle="modal" data-target="#registerModal">Sign Up</button>
+                            <button type="button" class="btn btn-start" data-toggle="modal" data-target="#loginModal">Log In</button>
                         <br><br><br>
-                        <a href="#about" class="btn btn-start-small page-scroll">More info</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+<!--Sign Up Modal-->
+
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel">
+    <div class="modal-content col-md-offset-4 col-sm-4" style="margin-top: 8em">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="registerModalLabel">Register</h4>
+      </div>
+      <div class="modal-body">
+    {{> register}}
+  </div>
+  </div>
+  </div>
+
+  <!--Login Modal-->
+
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
+    <div class="modal-content col-md-offset-4 col-sm-4" style="margin-top: 8em">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="loginModalLabel">Register</h4>
+      </div>
+      <div class="modal-body">
+    {{> login}}
+  </div>
+  </div>
+  </div>
+
+
+
 
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
@@ -121,13 +151,7 @@
                 </p>
                 <ul class="list-inline banner-social-buttons">
                     <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
                         <a href="https://github.com/smirkspace/smirkspace" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
                     </li>
                 </ul>
             </div>

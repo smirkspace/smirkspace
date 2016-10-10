@@ -260,17 +260,52 @@ a:focus {
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border-radius: 0;
+  font-size:14px;
+  border: solid #FFF 2px;
+  color: #FFF;
 }
 .btn-default {
-  border: 1px solid #42DCA3;
-  color: #42DCA3;
+  border: 3px solid #FFF;
+  color: #FFF;
   background-color: transparent;
 }
+
+.btn-start {
+  background: #0085de;
+  background-image: -webkit-linear-gradient(top, #0085de, #402bb8);
+  background-image: -moz-linear-gradient(top, #0085de, #402bb8);
+  background-image: -ms-linear-gradient(top, #0085de, #402bb8);
+  background-image: -o-linear-gradient(top, #0085de, #402bb8);
+  background-image: linear-gradient(to bottom, #0085de, #402bb8);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 15px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 25px;
+  padding: 10px 20px 10px 20px;
+  border: solid #ffffff 4px;
+  text-decoration: none;
+}
+
+
+.btn-start:hover {
+  background: #402bb8;
+  background-image: -webkit-linear-gradient(top, #402bb8, #0085de);
+  background-image: -moz-linear-gradient(top, #402bb8, #0085de);
+  background-image: -ms-linear-gradient(top, #402bb8, #0085de);
+  background-image: -o-linear-gradient(top, #402bb8, #0085de);
+  background-image: linear-gradient(to bottom, #402bb8, #0085de);
+  text-decoration: none;
+  color: #FFF;
+}
+
+
 .btn-default:hover,
 .btn-default:focus {
   border: 1px solid #42DCA3;
   outline: none;
-  color: black;
+  color: #FFF;
   background-color: #42DCA3;
 }
 ul.banner-social-buttons {

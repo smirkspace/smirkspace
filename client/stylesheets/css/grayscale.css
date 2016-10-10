@@ -359,3 +359,4 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
+body.modal-open { overflow:inherit; padding-right:inherit !important; }

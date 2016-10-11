@@ -2,8 +2,7 @@
 
 ## Description ##
 
-For students, making friends in class is both enjoyable and advantageous.  In some cases it can be necessary for success in the course. However, it can be daunting to approach strangers in class for fear of rejection.
-SmirkSpace aims to connect UVIC students who share common interests. Spaces are a fun, safe and easy way to meet fellow students!
+Students tend to frequent a limited set of places, namely their place residence and classes.  The people who share their interests are not necessarily in these same places.  We intend SmirkSpace to provide a place for people with like interests to connect.  To this end, we are targeting niche groups in the UVic community; people whose interests are rare enough that they won’t necessarily find congenial company without intentionally seeking it out.
 
 
 ## The Team ##

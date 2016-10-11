@@ -2,7 +2,7 @@
 
 ## Description ##
 
-Students tend to frequent a limited set of places, namely their place residence and classes.  The people who share their interests are not necessarily in these same places.  We intend SmirkSpace to provide a place for people with like interests to connect.  To this end, we are targeting niche groups in the UVic community; people whose interests are rare enough that they won’t necessarily find congenial company without intentionally seeking it out.
+Students tend to frequent a limited set of places, namely their place of residence and classes.  The people who share their interests are not necessarily in these same places.  We intend SmirkSpace to provide a place for people with like interests to connect.  To this end, we are targeting niche groups in the UVic community; people whose interests are rare enough that they won’t necessarily find congenial company without intentionally seeking it out.
 
 
 ## The Team ##

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Register from '../Register';
 import Login from '../Login';
 
-export default class App extends Component {
+export default class Splash extends Component {
   render() {
     return(
       <div>

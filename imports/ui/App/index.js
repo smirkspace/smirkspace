@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import Register from './Register.js';
-import Login from './Login.js';
+import Register from '../Register';
+import Login from '../Login';
 
 export default class App extends Component {
   render() {

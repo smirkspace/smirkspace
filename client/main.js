@@ -6,7 +6,7 @@ import { render } from 'react-dom';
 import AppFrame from '../imports/ui/AppFrame';
 import Splash from '../imports/ui/Splash';
 import Dashboard from '../imports/ui/Dashboard';
-import Space from '../imports/ui/Space';
+import SpaceFrame from '../imports/ui/SpaceFrame';
 
 import '../imports/startup/accounts-config.js';
 
@@ -27,7 +27,7 @@ Meteor.startup(() => {
         <IndexRedirect to="dashboard" />
         <Route path="splash" component={Splash} />
         <Route path="dashboard" component={Dashboard} onEnter={requireAuth} />
-        <Route path="space" component={Space} onEnter={requireAuth} />
+        <Route path="space" component={SpaceFrame} onEnter={requireAuth} />
       </Route>
     </Router>,
     document.getElementById('render-target')

@@ -24,3 +24,4 @@ mizzao:bootstrap-3
 accounts-password
 accounts-ui
 react-meteor-data
+twbs:bootstrap

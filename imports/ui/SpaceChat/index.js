@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Space extends Component {
+export default class SpaceChat extends Component {
   render() {
     return(
       <div>

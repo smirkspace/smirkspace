@@ -22,8 +22,8 @@ class AppFrame extends Component {
 
   render() {
     return(
-      <div className="container">
-        <nav className="navbar navbar-inverse">
+      <div className="container-fluid">
+        <nav className="navbar navbar-default">
           <div className="container-fluid">
             <div className="navbar-header">
                 <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -33,16 +33,16 @@ class AppFrame extends Component {
                     <span className="icon-bar"></span>
                 </button>
                 <a className="navbar-brand" href="#">SmirkSpace</a>
-                <button type="button" className="btn btn-default navbar-btn">Home</button>
-                <button type="button" className="btn btn-default navbar-btn">Dashboard</button>
-                <button type="button" className="btn btn-default navbar-btn">Space</button>
+                 <Link to="/"><button type="button" className="btn btn-primary navbar-btn"> Splash </button> </Link> 
+                 <Link to="/dashboard"><button type="button" className="btn btn-default navbar-btn"> Dashboard </button> </Link> 
+                 <Link to="/space"> <button type="button" className="btn btn-info navbar-btn"> Space </button> </Link> 
 
 
             </div>
 
-            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1" className="lead">
                 <ul className="nav navbar-nav navbar-right">
-                <li> <AccountsUIWrapper /> </li>
+                <li><button type="button" className="btn btn-success navbar-btn"> <AccountsUIWrapper /> </button> </li>
                 </ul>
             </div>
           </div>
@@ -56,32 +56,6 @@ class AppFrame extends Component {
       );
   }
 }
-
-
-
-
-
-
-
-
-
-
-    // return(
-    //   <div className="container">
-    //     <div className="header">
-    //       <AccountsUIWrapper />
-
-    //       <ul>
-    //         <li><Link to="/">Splash</Link></li>
-    //         <li><Link to="/dashboard">Dashboard</Link></li>
-    //         <li><Link to="/space">Space</Link></li>
-    //       </ul>
-    //     </div>
-
-        // <div className="content">
-        //   {this.props.children}
-        // </div>
-    //   </div>
 
 
 AppFrame.propTypes = {

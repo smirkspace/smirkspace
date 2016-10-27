@@ -17,10 +17,7 @@ export default class Navbar extends Component {
 	                    <span className="icon-bar"></span>
 	                    <span className="icon-bar"></span>
 	                </button>
-	                <a className="navbar-brand" href="#">SmirkSpace</a>
-	                 <Link to="/"><button type="button" className="btn btn-primary navbar-btn"> Splash </button> </Link> 
-	                 <Link to="/dashboard"><button type="button" className="btn btn-default navbar-btn"> Dashboard </button> </Link> 
-	                 <Link to="/space"> <button type="button" className="btn btn-info navbar-btn"> Space </button> </Link> 
+	                <Link to="/dashboard"> <a className="navbar-brand">SmirkSpace</a> </Link>
 
 
 	            </div>

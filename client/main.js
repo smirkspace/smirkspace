@@ -27,7 +27,13 @@ Meteor.startup(() => {
         <IndexRedirect to="dashboard" />
         <Route path="splash" component={Splash} />
         <Route path="dashboard" component={Dashboard} onEnter={requireAuth} />
-        <Route path="space" component={SpaceFrame} onEnter={requireAuth} />
+        <Route path="space" onEnter={requireAuth} >
+
+
+        <IndexRedirect to="/dashboard" />
+          <Route path="travel" component={SpaceFrame}/>
+        </Route>
+        
         <Route path='*' component={Splash} />
       </Route>
     </Router>,

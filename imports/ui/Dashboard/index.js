@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '../SpaceButtons';
 
 export default class Dashboard extends Component {
   render() {
@@ -12,6 +13,9 @@ export default class Dashboard extends Component {
                   <h1 className="brand-heading">Dashboard</h1>
                   <p className="intro-text">Helping you connect with students near you!<br />Find your space.</p>
                   <br /><br /><br />
+                  <div className='travel_button'>
+                  <Button src='images/new_travel.jpg' link="none"/>
+                  </div>
                 </div>
               </div>
             </div>

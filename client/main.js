@@ -28,6 +28,7 @@ Meteor.startup(() => {
         <Route path="splash" component={Splash} />
         <Route path="dashboard" component={Dashboard} onEnter={requireAuth} />
         <Route path="space" component={SpaceFrame} onEnter={requireAuth} />
+        <Route path='*' component={Splash} />
       </Route>
     </Router>,
     document.getElementById('render-target')

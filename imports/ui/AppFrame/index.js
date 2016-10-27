@@ -3,7 +3,9 @@ import { Link } from 'react-router'
 import { Meteor } from 'meteor/meteor';
 import { createContainer } from 'meteor/react-meteor-data';
 
-import AccountsUIWrapper from '../AccountsUIWrapper';
+import Navbar from '../Navbar';
+
+
 
 class AppFrame extends Component {
   componentWillReceiveProps(nextProps) {
@@ -19,24 +21,16 @@ class AppFrame extends Component {
 
   render() {
     return(
-      <div className="container">
-        <div className="header">
-          <AccountsUIWrapper />
-
-          <ul>
-            <li><Link to="/">Splash</Link></li>
-            <li><Link to="/dashboard">Dashboard</Link></li>
-            <li><Link to="/space">Space</Link></li>
-          </ul>
-        </div>
-
+      <div className="container-fluid">
+            <Navbar />
         <div className="content">
-          {this.props.children}
+              {this.props.children}
         </div>
       </div>
-    );
+      );
   }
 }
+
 
 AppFrame.propTypes = {
   currentUser: PropTypes.object,

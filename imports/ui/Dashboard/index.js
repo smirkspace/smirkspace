@@ -9,8 +9,10 @@ export default class Dashboard extends Component {
             <div className="container">
               <div className="row">
                 <div className="col-md-8 col-md-offset-2">
-                  <h1 className="brand-heading">Dashboard</h1>
+                  <h1 className="brand-heading bottom-align-text">Dashboard</h1>
+                      <h2> <Link to="/dashboard"> <button className="btn btn-default"> Travel </button></Link> </h2>
                   <p className="intro-text">Helping you connect with students near you!<br />Find your space.</p>
+
                   <br /><br /><br />
                 </div>
               </div>

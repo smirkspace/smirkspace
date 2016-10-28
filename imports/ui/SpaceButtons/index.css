@@ -5,10 +5,7 @@
 }
 
 .spaceButton:active {
-  padding-left: 5px;
-  padding-top: 5px;
-  padding-right: 5px;
-  padding-bottom: 5px;
+  padding-top: 1px;
   -o-transition:.3s;
   -ms-transition:.3s;
   -moz-transition:.3s;
@@ -17,7 +14,5 @@
 }
 
 .spaceButton:hover {
-  border-style: outset;
-  border-width: 2px;
-  border-color: white;
+  box-shadow: 1px 1px 1px #888888;
 }

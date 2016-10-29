@@ -1,10 +1,5 @@
 import { Meteor } from 'meteor/meteor';
 
-Meteor.startup(() => {
-  // code to run on server at startup
-});
-
-
 SimpleChat.configure ({
     texts:{
         loadMore: 'Load More',
@@ -23,12 +18,15 @@ SimpleChat.configure ({
     publishChats: function(roomId, limi){ //server
        //here the context is the same for a Publications, that mean you have access to this.userId who are asking for subscribe.
        // for example
-       return isLoggedAndHasAccessToSeeMessage(this.userId)
+       //This isn't working because isLoggedAndHasAccessToSeeMessage is not defined. We can define it ourselves, but right now we're returning true
+       //return isLoggedAndHasAccessToSeeMessage(this.userId)
+       return true
     },
     allow: function(message, roomId, username, avatar, name){
        //here the context is the same for a Methods, thats mean you hace access to this.userId also
        // for example
-       return isLoggedAndHasAccessSendMessages(this.userId)
+       //This isn't working because isLoggedAndHasAccessToSeeMessage is not defined. We can define it ourselves, but right now we're returning true
+       //return isLoggedAndHasAccessSendMessages(this.userId)
         return true
     },
     onNewMessage:function(msg){  //both
@@ -40,4 +38,9 @@ SimpleChat.configure ({
     },
     onLeft:function(roomId, username, name,date) { //server
     }
-})
+});
+
+
+Meteor.startup(() => {
+  // code to run on server at startup
+});

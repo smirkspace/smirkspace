@@ -3,55 +3,24 @@ import { Template } from 'meteor/templating';
 import Blaze from 'meteor/gadicc:blaze-react-component';
 
 
-
-SimpleChat.configure({
-    texts:{
-        loadMore: 'Load More',
-        placeholder: 'Type message ...',
-        button: 'send',
-        join: 'Join to',
-        left: 'Left the',
-        room: 'room at'
-
-    },
-    limit: 5,
-    beep: true,
-    showViewed: true,
-    showReceived: true,
-    showJoined: true,
-    
-    allow: function(message, roomId, username, avatar, name){
-       //here the context is the same for a Methods, thats mean you hace access to this.userId also
-       // for example
-       return isLoggedAndHasAccessSendMessages(this.userId)
-        return true
-    },
-    onNewMessage:function(msg){  //both
-    }
-
-})
-
-
 export default class SpaceChat extends Component {
-
-
 
 render() {
     return(
-      <div class="container">
+      <div className="container">
 
-          <div class="row" >
-              <div class=" col-md-8 col-md-offset-2" >
+          <div className="row" >
+              <div className=" col-md-8 col-md-offset-2" >
 
-                      <div class="box box-info direct-chat direct-chat-info">
-                          <div class="box-header with-border">
-                              <h3 class="box-title">Room: test</h3>
-                              <div class="box-tools pull-right">
-                                <button class="btn btn-box-tool" data-widget="collapse">Somebody New<i class="fa fa-minus"></i>
+                      <div className="box box-info direct-chat direct-chat-info">
+                          <div className="box-header with-border">
+                              <h3 className="box-title">Room: test</h3>
+                              <div className="box-tools pull-right">
+                                <button className="btn btn-box-tool" data-widget="collapse">Somebody New<i className="fa fa-minus"></i>
                                 </button>
                               </div>
                           </div>
-                          <Blaze template="SimpleChatWindow" roomId={"test"} username={"testUser"}/>
+                          <Blaze template="SimpleChatWindow" roomId={"test"} username={Meteor.user().username}/>
                       </div>
 
               </div>

@@ -33,10 +33,34 @@ Meteor.startup(() => {
         <IndexRedirect to="/dashboard" />
           <Route path="travel" component={SpaceFrame}/>
         </Route>
-        
+
         <Route path='*' component={Splash} />
       </Route>
     </Router>,
     document.getElementById('render-target')
   );
+});
+
+
+
+
+SimpleChat.configure ({
+    texts:{
+        loadMore: 'Load More',
+        placeholder: 'Type message ...',
+        button: 'send',
+        join: 'Join to',
+        left: 'Left the',
+        room: 'room at'
+
+    },
+    limit: 5,
+    beep: true,
+    showViewed: true,
+    showReceived: true,
+    showJoined: true,
+
+
+    onNewMessage:function(msg){  //both
+    }
 });

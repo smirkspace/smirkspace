@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { Meteor } from 'meteor/meteor';
 import { Link } from 'react-router'
-import Button from '../SpaceButtons';
+import Button from '../SpaceButton';
 
 export default class Dashboard extends Component {
   render() {
@@ -11,13 +12,11 @@ export default class Dashboard extends Component {
             <div className="container">
               <div className="row">
                 <div className="col-md-8 col-md-offset-2">
-                  <h1 className="brand-heading">Dashboard</h1>
-                  <p className="intro-text">Helping you connect with students near you!<br />Find your space.</p>
-                  <Link to="/space/travel"> 
+                  <h2>Welcome to your dashboard {Meteor.user().username}</h2>
+                  <p className="intro-text">Enter a space below to start chatting!</p>
                     <div className='travel_button'>
-                      <Button src='images/new_travel.jpg' link="none"/>
-                    </div>  
-                  </Link>
+                      <Button source='images/new_travel.jpg' link="/space/travel"/>
+                    </div>
                 </div>
               </div>
             </div>

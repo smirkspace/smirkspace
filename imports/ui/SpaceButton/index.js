@@ -6,12 +6,14 @@ import { Link } from 'react-router';
 export default class Button extends Component {
   render() {
     return(
-      <input type='image' className='spaceButton' src='images/new_travel.jpg'/>
+        <Link to={this.props.link}>
+            <input type='image' className='spaceButton' src={this.props.source}/>
+        </Link>
     );
   }
 }
 
 Button.propTypes = {
-  src: PropTypes.string.isRequired,
+  source: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
 };

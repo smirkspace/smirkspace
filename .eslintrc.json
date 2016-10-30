@@ -1,4 +1,11 @@
 {
+    "rules": {
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "react/prefer-stateless-function": 1,
+      "import/extensions": [2, "never"],
+      "import/no-unresolved": 0,
+      "import/no-extraneous-dependencies": 0
+    },
     "extends": "airbnb",
     "plugins": [
         "react",

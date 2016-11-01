@@ -24,6 +24,8 @@ Bridget Rassell [bridget.rassell@gmail.com]
 
 [Smirkspace] (http://smirkspace.scalingo.io/)
 
+[Video Demo] (https://www.youtube.com/watch?v=Iomo-CPjb2g)
+
 ## Resources/Documentation ##
 
 [Google Drive] (https://drive.google.com/drive/folders/0B0Ljy1h1W8BDbmF1YlQ1Qjk3dWM?usp=sharing)

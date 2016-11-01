@@ -22,7 +22,7 @@ Bridget Rassell [bridget.rassell@gmail.com]
 
 ## Live Demo Link/Video Link ##
 
-[Smirkspace] (http://smirkspace.scalingo.io/)
+[Live Demo] (http://smirkspace.scalingo.io/)
 
 [Video Demo] (https://www.youtube.com/watch?v=Iomo-CPjb2g)
 

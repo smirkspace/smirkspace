@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-
+import React, { Component } from 'react'
 export default class Splash extends Component {
-  render() {
-    return(
+  render () {
+    return (
       <div>
         <header className="intro">
           <div className="intro-body">
@@ -18,6 +17,6 @@ export default class Splash extends Component {
           </div>
         </header>
       </div>
-    );
+    )
   }
 }

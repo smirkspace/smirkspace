@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { Meteor } from 'meteor/meteor';
+import React, { Component } from 'react'
+import { Meteor } from 'meteor/meteor'
 import { Link } from 'react-router'
-import Button from '../SpaceButton';
+import Button from '../SpaceButton'
 
 export default class Dashboard extends Component {
-  render() {
-    return(
+  render () {
+    return (
       <div>
         <header className="intro">
           <div className="intro-body">
@@ -23,6 +23,6 @@ export default class Dashboard extends Component {
           </div>
         </header>
       </div>
-    );
+    )
   }
 }

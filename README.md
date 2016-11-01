@@ -1,4 +1,5 @@
-![smirk_logo](https://docs.google.com/uc?id=0Bwm6BkzE8IznV2hEZTlVdXRwYVU)
+
+![smirk_logo](https://docs.google.com/uc?id=0Bwm6BkzE8IznVklSOEdHT0c4VDA)
 
 ## Description ##
 

@@ -9,7 +9,7 @@ export default class SpaceFrame extends Component {
       <div className="container">
         <div className="header">
           <button>Report</button>
-          <button>Next</button>
+          <button><Link to="/space/travel">Next</Link></button>
         </div>
 
         <div className="content">

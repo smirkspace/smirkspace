@@ -26,3 +26,4 @@ react-meteor-data
 twbs:bootstrap
 cesarve:simple-chat
 gadicc:blaze-react-component
+autopublish

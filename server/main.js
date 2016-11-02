@@ -1,16 +1,17 @@
 import { Meteor } from 'meteor/meteor';
+import '../imports/api/ConversationsDbCollection.js';
 
 SimpleChat.configure ({
     texts:{
         loadMore: 'Load More',
         placeholder: 'Type message ...',
         button: 'send',
-        join: 'Join to',
+        join: 'Joined the',
         left: 'Left the',
         room: 'room at'
 
     },
-    limit: 5,
+    limit: 500,
     beep: true,
     showViewed: true,
     showReceived: true,

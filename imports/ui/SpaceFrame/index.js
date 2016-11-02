@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router'
-import SpaceChat from '../SpaceChat'
+import React, { Component } from 'react';
+import { } from 'react-router';
+import SpaceChat from '../SpaceChat';
 
 export default class SpaceFrame extends Component {
-  render () {
+  render() {
     return (
       <div className="container">
         <div className="header">
@@ -12,8 +12,8 @@ export default class SpaceFrame extends Component {
         </div>
         <div className="content">
           <SpaceChat />
-       </div>
+        </div>
       </div>
-    )
+    );
   }
 }

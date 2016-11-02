@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 export default class Splash extends Component {
-  render () {
+  render() {
     return (
       <div>
         <header className="intro">

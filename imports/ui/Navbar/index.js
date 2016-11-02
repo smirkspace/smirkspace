@@ -24,7 +24,7 @@ export default class Navbar extends Component {
 
 	            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1" className="lead">
 	                <ul className="nav navbar-nav navbar-right">
-	                <li><button type="button" className="btn btn-success navbar-btn"> <AccountsUIWrapper /> </button> </li>
+	                <li><button type="button" className="btn btn-success navbar-btn"><AccountsUIWrapper/></button></li>
 	                </ul>
 	            </div>
 	          </div>

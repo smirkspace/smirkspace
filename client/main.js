@@ -28,12 +28,9 @@ Meteor.startup(() => {
         <Route path="splash" component={Splash} />
         <Route path="dashboard" component={Dashboard} onEnter={requireAuth} />
         <Route path="space" onEnter={requireAuth} >
-
-
-        <IndexRedirect to="/dashboard" />
+          <IndexRedirect to="/dashboard" />
           <Route path="travel" component={SpaceFrame}/>
-        </Route>
-
+          </Route>
         <Route path='*' component={Splash} />
       </Route>
     </Router>,
@@ -41,25 +38,21 @@ Meteor.startup(() => {
   );
 });
 
-
-
-
 SimpleChat.configure ({
     texts:{
         loadMore: 'Load More',
         placeholder: 'Type message ...',
         button: 'send',
-        join: 'Join to',
+        join: 'Joined the',
         left: 'Left the',
         room: 'room at'
 
     },
-    limit: 5,
+    limit: 500,
     beep: true,
     showViewed: true,
     showReceived: true,
     showJoined: true,
-
 
     onNewMessage:function(msg){  //both
     }

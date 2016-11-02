@@ -3,22 +3,17 @@ import { Meteor } from 'meteor/meteor';
 
 export const Conversations = new Mongo.Collection('conversations');
 
-
 export function spaceGen() {
 
   //Assign the db items to a variable
   var test = Conversations.find().fetch();
 
-  console.log("Test " + test.length);
   for (var i = 0; i < test.length; i++) {
-    console.log("1");
     if (test[i].NumberInRoom == 1) {
-      console.log("2");
       Conversations.update({ _id: test[i]._id }, {$set:{NumberInRoom: 2, Available: false}});
       return test[i].Id;
     }
   }
-  console.log("3");
   //Create random room Id number
   var instance = Math.floor(Math.random() * 1000000);
 

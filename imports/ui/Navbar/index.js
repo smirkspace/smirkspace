@@ -17,7 +17,7 @@ export default class Navbar extends Component {
 	                    <span className="icon-bar"></span>
 	                    <span className="icon-bar"></span>
 	                </button>
-	                <h1><Link to="/dashboard"> <a className="navbar-brand">SmirkSpace</a> </Link> </h1>
+	                <h1><Link to="/dashboard" className="navbar-brand">SmirkSpace</Link> </h1>
 
 
 	            </div>
@@ -28,7 +28,7 @@ export default class Navbar extends Component {
 	                </ul>
 	            </div>
 	          </div>
-	          
+
 	        </nav>
 
 	    );

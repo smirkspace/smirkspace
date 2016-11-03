@@ -14,7 +14,7 @@ export default class SpaceChat extends Component {
         <div className="container">
 
             <div className="row" >
-                <div className=" col-md-8 col-md-offset-2" >
+                <div className="col-md-4">
 
                         <div className="box box-info direct-chat direct-chat-info">
                             <div className="box-header with-border">

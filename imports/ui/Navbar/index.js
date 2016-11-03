@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router'
 import { Meteor } from 'meteor/meteor';
-
 import AccountsUIWrapper from '../AccountsUIWrapper';
-
 
 export default class Navbar extends Component {
 	render() {

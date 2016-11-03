@@ -27,3 +27,9 @@ twbs:bootstrap
 cesarve:simple-chat
 gadicc:blaze-react-component
 autopublish
+cosmos:browserify
+meteorhacks:npm
+mquandalle:bower
+
+
+npm-container

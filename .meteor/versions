@@ -18,6 +18,8 @@ caching-html-compiler@1.0.7
 callback-hook@1.0.9
 cesarve:simple-chat@0.3.1
 check@1.2.3
+coffeescript@1.0.17
+cosmos:browserify@0.10.0
 ddp@1.2.5
 ddp-client@1.2.9
 ddp-common@1.2.6
@@ -47,6 +49,8 @@ localstorage@1.0.11
 logging@1.1.15
 meteor@1.2.17
 meteor-base@1.0.4
+meteorhacks:async@1.0.0
+meteorhacks:npm@1.5.0
 minifier-css@1.2.14
 minifier-js@1.2.14
 minimongo@1.0.17
@@ -58,7 +62,9 @@ modules-runtime@0.7.6
 momentjs:moment@2.11.2
 mongo@1.1.12
 mongo-id@1.0.5
+mquandalle:bower@1.5.2_1
 npm-bcrypt@0.9.1
+npm-container@1.2.0
 npm-mongo@1.5.49
 observe-sequence@1.0.12
 ordered-dict@1.0.8

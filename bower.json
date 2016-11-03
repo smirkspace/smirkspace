@@ -1,0 +1,20 @@
+{
+  "name": "smirkspace",
+  "description": "",
+  "authors": [
+    "bridgetrass <bridget.rassell@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/smirkspace/smirkspace",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    ".meteor/local/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "slick-carousel": "^1.6.0"
+  }
+}

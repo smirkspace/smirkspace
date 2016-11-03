@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Link } from 'react-router'
 import Button from '../SpaceButton';
+import Carousel from '../Carousel';
+
 
 export default class Dashboard extends Component {
   render() {
@@ -19,6 +21,11 @@ export default class Dashboard extends Component {
                     </div>
                 </div>
               </div>
+
+              <div className="row">
+                < Carousel />
+              </div>
+
             </div>
           </div>
         </header>

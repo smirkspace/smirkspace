@@ -1,16 +1,35 @@
 import React, { Component } from 'react';
 import Slider  from 'react-slick';
 
+import Button from '../SpaceButton';
+
+const SampleNextArrow = React.createClass({
+  render: function() {
+    return <div {...this.props}>
+    			<button type="button"><i className="fa fa-arrow-right" aria-hidden="true"> </i></button>
+    		</div>
+  }
+});
+
+const SamplePrevArrow = React.createClass({
+  render: function() {
+    return <div {...this.props}>
+          		<button type="button"><i className="fa fa-arrow-left"> </i></button>
+          	</div>
+  }
+});
+
+
 
 export default class Carousel extends Component {
   render() {
     var settings = {
       dots: true,
-      infinite: false,
+      infinite: true,
       speed: 500,
-      slidesToShow: 4,
       slidesToScroll: 4,
-      initialSlide: 0,
+      slidesToShow: 4,
+
       responsive: [{
         breakpoint: 1024,
         settings: {
@@ -36,18 +55,52 @@ export default class Carousel extends Component {
     };
     return (
       <div>
-        <h2> Responsive </h2>
         <Slider {...settings}>
-          <div><h3>1</h3></div>
-          <div><h3>2</h3></div>
-          <div><h3>3</h3></div>
-          <div><h3>4</h3></div>
-          <div><h3>5</h3></div>
-          <div><h3>6</h3></div>
-          <div><h3>7</h3></div>
-          <div><h3>8</h3></div>
+          <div>
+          	<h3>
+            	<div className='travel_button'>
+              		<Button source='images/new_travel.jpg' link="/space/travel"/>
+            	</div>
+            </h3>
+          </div>
+
+          <div>
+          	<h3>
+            	<div className='travel_button'>
+              		<Button source='images/new_travel.jpg' link="/space/travel"/>
+            	</div>
+            </h3>
+          </div>
+          <div>
+          	<h3>
+            	<div className='travel_button'>
+              		<Button source='images/new_travel.jpg' link="/space/travel"/>
+            	</div>
+            </h3>
+          </div>
+          <div>
+          	<h3>
+            	<div className='travel_button'>
+              		<Button source='images/new_travel.jpg' link="/space/travel"/>
+            	</div>
+            </h3>
+          </div>
+          <div>
+          	<h3>
+            	<div className='travel_button'>
+              		<Button source='images/new_travel.jpg' link="/space/travel"/>
+            	</div>
+            </h3>
+          </div>
+          <div>
+          	<h3>
+            	<div className='travel_button'>
+              		<Button source='images/new_travel.jpg' link="/space/travel"/>
+            	</div>
+            </h3>
+          </div>
         </Slider>
       </div>
     );
   }
-};
+}

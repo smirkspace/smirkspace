@@ -25,7 +25,7 @@ export default class SpaceChat extends Component {
                           <div className="box-header with-border">
                               <h3 className="box-title">Room: {space}</h3>
                               <div className="box-tools pull-right">
-                                <button className='btn btn-primary' onClick={reportPopup}>Report User</button>
+                                <button className='btn btn-danger' onClick={reportPopup}>Report User</button>
                                 <Link to="/space/travel"><button className='btn btn-primary'>Next Conversation</button></Link>
                               </div>
                           </div>

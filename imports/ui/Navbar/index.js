@@ -18,17 +18,13 @@ export default class Navbar extends Component {
 	                    <span className="icon-bar"></span>
 	                </button>
 	                <h1><Link to="/dashboard" className="navbar-brand">SmirkSpace</Link> </h1>
-
-
 	            </div>
-
 	            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1" className="lead">
-	                <ul className="nav navbar-nav navbar-right">
-	                <li><button type="button" className="btn btn-success navbar-btn"><AccountsUIWrapper/></button></li>
+	                <ul className="nav navbar-nav navbar-right col-md-4">
+	                <li><button type="button" className="btn navbar-btn"><AccountsUIWrapper/></button></li>
 	                </ul>
 	            </div>
 	          </div>
-
 	        </nav>
 
 	    );

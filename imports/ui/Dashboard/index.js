@@ -4,7 +4,6 @@ import { Link } from 'react-router'
 import Button from '../SpaceButton';
 import Carousel from '../Carousel';
 
-//               <div className="col-md-10 col-md-offset-1">
 export default class Dashboard extends Component {
   render() {
     return(
@@ -19,16 +18,15 @@ export default class Dashboard extends Component {
                 </div>
               </div>
               <br></br><br></br>
-
             </div>
           </div>
 
         </header>
           <div className="row">
-            <div className="col-md-12">
+            <div className="col-sm-10 col-md-offset-1">
                 <div> <Carousel /> </div>
-                 </div>
-               </div>
+            </div>
+         </div>
         
       </div>
     );

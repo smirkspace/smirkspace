@@ -3,19 +3,19 @@ import Slider  from 'react-slick';
 
 import Button from '../SpaceButton';
 
-const SampleNextArrow = React.createClass({
+const NextArrow = React.createClass({
   render: function() {
     return <div {...this.props}>
-    			<button type="button"><i className="fa fa-arrow-right" aria-hidden="true"> </i></button>
+    			<button type="button" className="col-sm-offset-6"><i className="glyphicon glyphicon-arrow-right" aria-hidden="true"> </i></button>
     		</div>
   }
 });
 
-const SamplePrevArrow = React.createClass({
+const PrevArrow = React.createClass({
   render: function() {
-    return <div {...this.props}>
-          		<button type="button"><i className="fa fa-arrow-left"> </i></button>
-          	</div>
+    return <div {...this.props} >
+       		<button type="button" className="col-sm-offset-6"><i className="glyphicon glyphicon-arrow-left" aria-hidden="true"> </i></button>
+       	</div>
   }
 });
 
@@ -24,19 +24,19 @@ const SamplePrevArrow = React.createClass({
 export default class Carousel extends Component {
   render() {
     var settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 500,
       slidesToScroll: 4,
       slidesToShow: 4,
-
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />,
       responsive: [{
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
         }
       }, {
         breakpoint: 600,
@@ -54,7 +54,7 @@ export default class Carousel extends Component {
       }]
     };
     return (
-      <div>
+      <div className="align-center">
         <Slider {...settings}>
           <div>
           	<h3>
@@ -67,35 +67,35 @@ export default class Carousel extends Component {
           <div>
           	<h3>
             	<div className='travel_button'>
-              		<Button source='images/new_travel.jpg' link="/space/travel"/>
+              		<Button source='images/Parenting.jpg' link="/space/travel"/>
             	</div>
             </h3>
           </div>
           <div>
           	<h3>
             	<div className='travel_button'>
-              		<Button source='images/new_travel.jpg' link="/space/travel"/>
+              		<Button source='images/insomnia.png' link="/space/travel"/>
             	</div>
             </h3>
           </div>
           <div>
           	<h3>
             	<div className='travel_button'>
-              		<Button source='images/new_travel.jpg' link="/space/travel"/>
+              		<Button source='images/LGBT.jpg' link="/space/travel"/>
             	</div>
             </h3>
           </div>
           <div>
           	<h3>
             	<div className='travel_button'>
-              		<Button source='images/new_travel.jpg' link="/space/travel"/>
+              		<Button source='images/workout.jpg' link="/space/travel"/>
             	</div>
             </h3>
           </div>
           <div>
           	<h3>
             	<div className='travel_button'>
-              		<Button source='images/new_travel.jpg' link="/space/travel"/>
+              		<Button source='images/thrones.jpg' link="/space/travel"/>
             	</div>
             </h3>
           </div>

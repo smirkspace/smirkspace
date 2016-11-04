@@ -10,8 +10,7 @@ export default class Splash extends Component {
               <div className="row">
                 <div className="col-md-8 col-md-offset-2">
                   <h1 className="brand-heading">SmirkSpace</h1>
-                  <p className="intro-text">Helping you connect with students near you!<br />Find your space.</p>
-                  <br /><br /><br />
+                  <p className="intro-text">Connecting People Through Conversation</p>
                 </div>
               </div>
             </div>

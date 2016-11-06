@@ -3,6 +3,7 @@ import { } from 'react-router';
 import { Meteor } from 'meteor/meteor';
 import { createContainer } from 'meteor/react-meteor-data';
 import Navbar from '../Navbar';
+import Footer from '../Footer';
 
 class AppFrame extends Component {
   componentWillReceiveProps(nextProps) {
@@ -23,6 +24,7 @@ class AppFrame extends Component {
         <div className="content">
           {this.props.children}
         </div>
+        <Footer />
       </div>
     );
   }

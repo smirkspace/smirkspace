@@ -2,11 +2,12 @@ import React from 'react';
 import { Router, Route, browserHistory, IndexRedirect } from 'react-router';
 import { Meteor } from 'meteor/meteor';
 import { render } from 'react-dom';
-
 import AppFrame from '../imports/ui/AppFrame';
 import Splash from '../imports/ui/Splash';
 import Dashboard from '../imports/ui/Dashboard';
+import AboutUs from '../imports/ui/AboutUs';
 import SpaceFrame from '../imports/ui/SpaceFrame';
+import ContactUs from '../imports/ui/ContactUs';
 
 import '../imports/startup/accounts-config';
 
@@ -26,6 +27,8 @@ Meteor.startup(() => {
       <Route path="/" component={AppFrame}>
         <IndexRedirect to="dashboard" />
         <Route path="splash" component={Splash} />
+        <Route path="contact-us" component={ContactUs} />
+        <Route path="about-us" component={AboutUs} />
         <Route path="dashboard" component={Dashboard} onEnter={requireAuth} />
         <Route path="space" onEnter={requireAuth} >
           <IndexRedirect to="/dashboard" />

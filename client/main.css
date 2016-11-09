@@ -4,7 +4,8 @@ body {
   font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: black;
   background-color: white;
-  background: url(images/starsbackground.jpg) no-repeat bottom center scroll;
+  background: url(images/starsbackground.jpg);
+  background-repeat: repeat-y;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;

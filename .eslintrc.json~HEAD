@@ -9,7 +9,7 @@
   "extends": [
     "airbnb",
     "plugin:meteor/recommended"
-    ],
+  ],
   "settings": {
     "import/resolver": "meteor"
   },

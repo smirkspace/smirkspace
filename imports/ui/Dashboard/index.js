@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Link } from 'react-router'
-import Button from '../SpaceButton';
+import { } from 'react-router';
 import Carousel from '../Carousel';
 
 export default class Dashboard extends Component {
   render() {
-    return(
+    return (
       <div>
         <header className="intro">
           <div className="intro-body">
@@ -17,17 +16,15 @@ export default class Dashboard extends Component {
                   <p className="intro-text">Enter a space below to start chatting!</p>
                 </div>
               </div>
-              <br></br><br></br>
+              <br /><br />
             </div>
           </div>
-
         </header>
-          <div className="row">
-            <div className="col-sm-10 col-md-offset-1">
-                <div> <Carousel /> </div>
-            </div>
-         </div>
-        
+        <div className="row">
+          <div className="col-sm-10 col-md-offset-1">
+            <div> <Carousel /> </div>
+          </div>
+        </div>
       </div>
     );
   }

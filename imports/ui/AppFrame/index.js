@@ -30,6 +30,7 @@ class AppFrame extends Component {
 
 
 AppFrame.propTypes = {
+  children: React.PropTypes.node,
   currentUser: PropTypes.object,
 };
 
@@ -37,8 +38,6 @@ AppFrame.contextTypes = {
   router: React.PropTypes.object.isRequired,
 };
 
-export default createContainer(() => {
-  return {
-    currentUser: Meteor.user(),
-  };
-}, AppFrame);
+export default createContainer(() => ({
+  currentUser: Meteor.user(),
+}), AppFrame);

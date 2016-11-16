@@ -1,5 +1,3 @@
-import { Meteor } from 'meteor/meteor';
-
 Meteor.npmRequire = function (moduleName) {
   const module = Npm.require(moduleName);
   return module;

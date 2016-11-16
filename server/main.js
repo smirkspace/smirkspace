@@ -46,4 +46,5 @@ SimpleChat.configure({
 
 Meteor.startup(() => {
   // code to run on server at startup
+  process.env.MAIL_URL = 'smtp://postmaster%40smirkspace.com:d8653b6e85794a852ac1ac62b6eec159@smtp.mailgun.org:587';
 });

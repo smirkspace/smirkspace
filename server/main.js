@@ -43,8 +43,27 @@ SimpleChat.configure({
   },
 });
 
+Accounts.config({
+  sendVerificationEmail: true,
+});
 
 Meteor.startup(() => {
   // code to run on server at startup
   process.env.MAIL_URL = 'smtp://postmaster%40smirkspace.com:d8653b6e85794a852ac1ac62b6eec159@smtp.mailgun.org:587';
+
+
+  // Set the from address
+  Accounts.emailTemplates.from = 'support@smirkspace.com';
+
+  // Application name
+  Accounts.emailTemplates.siteName = 'SmirkSpace';
+
+  // Subject line of the email.
+  Accounts.emailTemplates.verifyEmail.subject = function () {
+    return 'Confirm Your Email Address for SmirkSpace';
+  };
+
+  Accounts.emailTemplates.verifyEmail.html = function (user, url) {
+    return `<h1>Welcome to SmirkSpace!</h1></br></br> <p>You are moments away from sharing real conversations with users just like you!</p></br><p>Click the button below to verify your account,</p></br><button type="button"><a href="${url}">Verify eMail</a></button>`;
+  };
 });

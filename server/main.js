@@ -1,44 +1,46 @@
 import { Meteor } from 'meteor/meteor';
-import '../imports/api/ConversationsDbCollection.js';
+import '../imports/api/ConversationsDbCollection';
 
-SimpleChat.configure ({
-    texts:{
-        loadMore: 'Load More',
-        placeholder: 'Type message ...',
-        button: 'send',
-        join: 'Joined the',
-        left: 'Left the',
-        room: 'room at'
+SimpleChat.configure({
+  texts: {
+    loadMore: 'Load More',
+    placeholder: 'Type message ...',
+    button: 'send',
+    join: 'Joined the',
+    left: 'Left the',
+    room: 'room at',
 
-    },
-    limit: 500,
-    beep: true,
-    showViewed: true,
-    showReceived: true,
-    showJoined: true,
-    publishChats: function(roomId, limi){ //server
-       //here the context is the same for a Publications, that mean you have access to this.userId who are asking for subscribe.
-       // for example
-       //This isn't working because isLoggedAndHasAccessToSeeMessage is not defined. We can define it ourselves, but right now we're returning true
-       //return isLoggedAndHasAccessToSeeMessage(this.userId)
-       return true
-    },
-    allow: function(message, roomId, username, avatar, name){
-       //here the context is the same for a Methods, thats mean you hace access to this.userId also
-       // for example
-       //This isn't working because isLoggedAndHasAccessToSeeMessage is not defined. We can define it ourselves, but right now we're returning true
-       //return isLoggedAndHasAccessSendMessages(this.userId)
-        return true
-    },
-    onNewMessage:function(msg){  //both
-    },
-    onReceiveMessage:function(id, message, room){ //server
-
-    },
-    onJoin:function(roomId, username, name,date){  //server
-    },
-    onLeft:function(roomId, username, name,date) { //server
-    }
+  },
+  limit: 500,
+  beep: true,
+  showViewed: true,
+  showReceived: true,
+  showJoined: true,
+  publishChats: function f1() { // server
+  // here the context is the same for a Publications,
+  // that mean you have access to this.userId who are asking for subscribe.
+  // for example
+  // This isn't working because isLoggedAndHasAccessToSeeMessage is not
+  // defined. We can define it ourselves, but right now we're returning true
+  // return isLoggedAndHasAccessToSeeMessage(this.userId)
+    return true;
+  },
+  allow: function f2() {
+  // here the context is the same for a Methods, thats mean you hace access to this.userId also
+  // for example
+  // This isn't working because isLoggedAndHasAccessToSeeMessage is not
+  // defined. We can define it ourselves, but right now we're returning true
+  // return isLoggedAndHasAccessSendMessages(this.userId)
+    return true;
+  },
+  onNewMessage: function f2() {  // both
+  },
+  onReceiveMessage: function f3() { // server
+  },
+  onJoin: function f4() {  // server
+  },
+  onLeft: function f5() { // server
+  },
 });
 
 

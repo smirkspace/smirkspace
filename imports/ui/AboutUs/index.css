@@ -1,0 +1,43 @@
+#header {
+  color: #ffffff;
+  text-align: left;
+  margin-left: 120px;
+  margin-top: 70px;
+}
+h4 {
+  color: #ffffff;
+  font-style: oblique;
+  text-align: left;
+  margin-left: 120px;
+}
+#paragraph {
+  color: #ffffff;
+  text-align: left;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+p {
+  color: #ffffff;
+  text-align: center;;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+tr td {
+  padding: 20px;
+  color: #ffffff;
+  text-align: center;
+  font-family: "verdana";
+  font-style: oblique;
+  font-size: 20px;
+}
+table {
+  margin-left: 100px;
+  margin-right: 100px;
+
+  text-align: center;
+  border-collapse:collapse;
+}
+img {
+  padding: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+}

@@ -26,7 +26,7 @@ export default class Carousel extends Component {
     //And to incrememnt counters for fake doors
     function spaceNotAvailable() {
       alert('This space is still being developed.\nCheck back soon!');
-      //increment counters collection here...
+      //increment counters collection here....
     }
 
     var settings = {

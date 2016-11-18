@@ -25,7 +25,6 @@ react-meteor-data
 twbs:bootstrap
 cesarve:simple-chat
 gadicc:blaze-react-component
-autopublish
 cosmos:browserify
 meteorhacks:npm
 mquandalle:bower
@@ -36,3 +35,4 @@ stylus
 ian:accounts-ui-bootstrap-3
 spacebars
 nemo64:bootstrap
+autopublish

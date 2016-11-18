@@ -74,6 +74,7 @@ Meteor.startup(() => {
     decrementRoomNum();
   });
 
+Meteor.startup(() => {
   render(
     <Router history={browserHistory}>
       <Route path="/" component={AppFrame}>
@@ -83,6 +84,7 @@ Meteor.startup(() => {
         <Route path="space" onEnter={requireAuth} >
           <IndexRedirect to="/dashboard" />
           <Route path="travel" component={SpaceFrame} onLeave={decrementRoomNum} />
+          <Route path="travel" component={SpaceFrame} /> 
         </Route>
         <Route path="*" component={Splash} />
       </Route>

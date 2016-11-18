@@ -22,6 +22,8 @@ export default class Carousel extends Component {
 
   render() {
 
+    //Function to give alerts for buttons not yet made
+    //And to incrememnt counters for fake doors
     function spaceNotAvailable() {
       alert('This space is still being developed.\nCheck back soon!');
     }

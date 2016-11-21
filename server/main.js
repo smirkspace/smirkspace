@@ -1,4 +1,5 @@
 import { Meteor } from 'meteor/meteor';
+import { Accounts } from 'meteor/accounts-base';
 import '../imports/api/ConversationsDbCollection';
 
 SimpleChat.configure({
@@ -40,6 +41,15 @@ SimpleChat.configure({
   onJoin: function f4() {  // server
   },
   onLeft: function f5() { // server
+  },
+});
+
+Meteor.methods({
+  'resend': function () {
+    const id = Meteor.user()._id;
+    Accounts.sendVerificationEmail(id);
+    console.log('verification email sent');
+    return true;
   },
 });
 

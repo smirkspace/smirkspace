@@ -7,6 +7,8 @@ import AppFrame from '../imports/ui/AppFrame';
 import Splash from '../imports/ui/Splash';
 import Dashboard from '../imports/ui/Dashboard';
 import SpaceFrame from '../imports/ui/SpaceFrame';
+import VerifyEmail from '../imports/ui/VerifyEmail';
+
 
 import '../imports/startup/accounts-config';
 
@@ -15,6 +17,11 @@ function requireAuth(nextState, replace) {
   if (!Meteor.user()) {
     replace({
       pathname: '/splash',
+      state: { nextPathname: nextState.location.pathname },
+    });
+  } else if (!Meteor.user().emails[0].verified) {
+    replace({
+      pathname: '/verifyEmail',
       state: { nextPathname: nextState.location.pathname },
     });
   }
@@ -26,6 +33,7 @@ Meteor.startup(() => {
       <Route path="/" component={AppFrame}>
         <IndexRedirect to="dashboard" />
         <Route path="splash" component={Splash} />
+        <Route path="verifyEmail" component={VerifyEmail} />
         <Route path="dashboard" component={Dashboard} onEnter={requireAuth} />
         <Route path="space" onEnter={requireAuth} >
           <IndexRedirect to="/dashboard" />

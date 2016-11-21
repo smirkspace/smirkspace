@@ -3,22 +3,29 @@ import { } from 'meteor/meteor';
 
 export const Conversations = new Mongo.Collection('conversations');
 
-// Create random room Id number
-let instance = Math.floor(Math.random() * 1000000);
-export function spaceGen() {
-  // Assign the db items to a variable
-  const test = Conversations.find().fetch();
+if (Meteor.isServer) {
+  // This code only runs on the server
+  Meteor.publish('conversations', () => Conversations.find());
+}
 
-  for (let i = 0; i < test.length; i += 1) {
-    if (test[i].NumberInRoom === 1) {
-      Conversations.update({ _id: test[i]._id }, { $set: { NumberInRoom: 2, Available: false } });
-      return test[i].Id;
+export function spaceGen() {
+  Meteor.subscribe('conversations');
+  // Assign the db items to a variable
+  const convo = Conversations.find().fetch();
+
+  for (let i = 0; i < convo.length; i++) {
+    if (convo[i].NumberInRoom === 1 && convo[i].Available === true) {
+      Conversations.update({ _id: convo[i]._id },
+        { $set: { NumberInRoom: 2, Available: false, user2: Meteor.user().username } });
+      return convo[i].Id;
     }
   }
 
+  let instance = Math.floor(Math.random() * 1000000);
+
   // go through db items to make sure Id is unique
-  for (let i = 0; i < test.length; i += 1) {
-    if (test[i].Id === instance) {
+  for (let i = 0; i < convo.length; i += 1) {
+    if (convo[i].Id === instance) {
       instance = Math.floor(Math.random() * 1000000);
       // continue;
     }
@@ -29,6 +36,7 @@ export function spaceGen() {
     NumberInRoom: 1,
     Id: instance,
     Available: true,
+    user1: Meteor.user().username,
   });
 
   return instance;

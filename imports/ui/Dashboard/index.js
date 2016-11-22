@@ -3,6 +3,8 @@ import { Meteor } from 'meteor/meteor';
 import { } from 'react-router';
 import Carousel from '../Carousel';
 
+import Blurb from '../BlurbModal';
+
 export default function Dashboard() {
   return (
     <div>
@@ -22,6 +24,7 @@ export default function Dashboard() {
       <div className="row">
         <div className="col-sm-10 col-md-offset-1">
           <div> <Carousel /> </div>
+          
         </div>
       </div>
     </div>

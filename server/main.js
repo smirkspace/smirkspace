@@ -15,7 +15,7 @@ SimpleChat.configure({
   beep: true,
   showViewed: true,
   showReceived: true,
-  showJoined: true,
+  showJoined: false,
   publishChats: function f1() { // server
   // here the context is the same for a Publications,
   // that mean you have access to this.userId who are asking for subscribe.

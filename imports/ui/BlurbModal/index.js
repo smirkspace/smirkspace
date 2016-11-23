@@ -1,8 +1,9 @@
 import React, { Component, Button } from 'react';
-import { Modal } from 'react-modal';
+// import { Modal } from 'react-modal';
 import { } from 'react-router';
 import { } from 'meteor/meteor';
 
+var Modal = ReactBootstrap.Modal;
 
 export default class Blurb extends React.Component{
 	constructor(props) {

@@ -18,18 +18,19 @@ export default function Button(props) {
     alert('This space is still being developed.\nCheck back soon!');
   }
 
-  const buttonType = props.link
+  const buttonType = props.spaceIsDeployed
   ? (
-    <Link to={props.link}>
+    <Link to={'/space/' + props.buttonName}>
       <input type="image" className="spaceButton" src={props.source} />
-    </Link>)
+    </Link>
+    )
   : <input type="image" className="spaceButton" src={props.source} onClick={spaceNotAvailable} />
 
   return buttonType;
 }
 
 Button.propTypes = {
-  link: PropTypes.string,
+  spaceIsDeployed: PropTypes.string,
   buttonName: PropTypes.string.isRequired,
   source: PropTypes.string.isRequired,
 };

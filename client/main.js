@@ -11,6 +11,7 @@ import ContactUs from '../imports/ui/ContactUs';
 
 import '../imports/startup/accounts-config';
 import { Conversations } from '../imports/api/ConversationsDbCollection';
+import { Button } from '../imports/ui/SpaceButton';
 
 // if the user is not logged in, redirect them to the splash page
 function requireAuth(nextState, replace) {
@@ -83,9 +84,9 @@ Meteor.startup(() => {
         <Route path="contact-us" component={ContactUs} />
         <Route path="about-us" component={AboutUs} />
         <Route path="dashboard" component={Dashboard} onEnter={requireAuth} />
-        <Route path="space" onEnter={requireAuth} >
+        <Route path="space" onEnter={requireAuth} component={SpaceFrame} >
           <IndexRedirect to="/dashboard" />
-          <Route path="travel" component={SpaceFrame} onLeave={decrementRoomNum} />
+          <Route path=":buttonName" component={Button} onLeave={decrementRoomNum} />
         </Route>
         <Route path="*" component={Splash} />
       </Route>

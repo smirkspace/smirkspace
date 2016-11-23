@@ -51,7 +51,7 @@ export default class Carousel extends Component {
             <br />
             <h3>
               <div className="travel_button">
-                <Button source="images/new_travel.jpg" link="/space/travel" buttonName="travel"/>
+                <Button source="images/new_travel.jpg" spaceIsDeployed="true" buttonName="travel"/>
               </div>
             </h3>
           </div>

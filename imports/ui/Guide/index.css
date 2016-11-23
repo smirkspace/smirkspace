@@ -1,0 +1,56 @@
+.div1 {
+   position:relative;
+   left:0px;
+   margin-left: 0px;
+   margin-right: 0px;
+   text-align: left;
+   width:100%;
+   background:#ffffff;
+   padding: 3rem;
+   color: #000000;
+   border-top: 1px solid #353535;
+   height: 400px;
+   opacity: 0.7;
+}
+.img {
+  float: right;
+  margin-right: 200px;
+  clear:both;
+}
+.div2 {
+  position:relative;
+  left:0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: left;
+  width:100%;
+  background:#031932;
+  padding: 3rem;
+  color: #ffffff;
+  border-top: 1px solid #353535;
+  height: 400px;
+}
+.one {
+ float: left;
+ width: 40%;
+ margin: 0.5em;
+ color: #000000;
+}
+.two {
+ float: left;
+ width: 40%;
+ margin: 0.5em;
+ color: #ffffff;
+}
+.paragraph1 {
+ width: 30%;
+margin-left: 20px;
+ text-align: left;
+ color: #000000;
+}
+.paragraph2 {
+ width: 30%;
+margin-left: 20px;
+ text-align: left;
+ color: #ffffff;
+}

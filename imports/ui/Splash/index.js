@@ -1,4 +1,5 @@
 import React from 'react';
+import Guide from '../Guide';
 
 export default function Splash() {
   return (
@@ -15,6 +16,7 @@ export default function Splash() {
           </div>
         </div>
       </header>
+      <Guide />
     </div>
   );
 }

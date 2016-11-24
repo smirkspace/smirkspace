@@ -9,7 +9,6 @@ import AboutUs from '../imports/ui/AboutUs';
 import SpaceFrame from '../imports/ui/SpaceFrame';
 import VerifyEmail from '../imports/ui/VerifyEmail';
 import ContactUs from '../imports/ui/ContactUs';
-
 import '../imports/startup/accounts-config';
 import { Conversations } from '../imports/api/ConversationsDbCollection';
 

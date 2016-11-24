@@ -10,11 +10,21 @@ if (Meteor.isServer) {
 
 export function spaceGen() {
   Meteor.subscribe('conversations');
+  const url = window.location.href;
+  let index = url.length - 1;
+  let char = url[index];
+  let path = '';
+
+  while (char !== '/') {
+    path = char.concat(path);
+    index -= 1;
+    char = url[index];
+  }
   // Assign the db items to a variable
   const convo = Conversations.find().fetch();
 
   for (let i = 0; i < convo.length; i++) {
-    if (convo[i].NumberInRoom === 1 && convo[i].Available === true) {
+    if (convo[i].NumberInRoom === 1 && convo[i].Available === true && convo[i].Category === path) {
       Conversations.update({ _id: convo[i]._id },
         { $set: { NumberInRoom: 2, Available: false, user2: Meteor.user().username } });
       return convo[i].Id;
@@ -32,7 +42,7 @@ export function spaceGen() {
   }
 
   Conversations.insert({
-    Category: 'Travel',
+    Category: path,
     NumberInRoom: 1,
     Id: instance,
     Available: true,

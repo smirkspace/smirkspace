@@ -6,6 +6,8 @@ import { } from 'meteor/templating';
 import Blaze from 'meteor/gadicc:blaze-react-component';
 import { Conversations, spaceGen } from '../../api/ConversationsDbCollection';
 import { } from '../SpaceButton/index';
+import { countHandler, Counters } from '../../api/CountersDbCollection'
+
 
 export default function SpaceFrame() {
   Meteor.subscribe('conversations');
@@ -50,10 +52,12 @@ export default function SpaceFrame() {
   };
 
   function reportPopup() {
+    countHandler("reportUser");
     alert('The report function is still in development.\nIf you have a claim please email us at smirkspace@gmail.com');
   }
 
   function videoPopup() {
+    countHandler("startVideoChat");
     alert('The video-chat function is still in development.\nCheck back soon!');
   }
 

@@ -1,5 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import '../imports/api/ConversationsDbCollection';
+import '../imports/api/CountersDbCollection';
 
 SimpleChat.configure({
   texts: {

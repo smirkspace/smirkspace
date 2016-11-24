@@ -6,7 +6,7 @@ import { } from 'meteor/templating';
 import Blaze from 'meteor/gadicc:blaze-react-component';
 import { Conversations, spaceGen } from '../../api/ConversationsDbCollection';
 import { } from '../SpaceButton/index';
-import { countHandler, Counters } from '../../api/CountersDbCollection'
+import { countHandler } from '../../api/CountersDbCollection';
 
 
 export default function SpaceFrame() {
@@ -52,12 +52,12 @@ export default function SpaceFrame() {
   };
 
   function reportPopup() {
-    countHandler("reportUser");
+    countHandler('reportUser');
     alert('The report function is still in development.\nIf you have a claim please email us at smirkspace@gmail.com');
   }
 
   function videoPopup() {
-    countHandler("startVideoChat");
+    countHandler('startVideoChat');
     alert('The video-chat function is still in development.\nCheck back soon!');
   }
 
@@ -81,7 +81,7 @@ export default function SpaceFrame() {
               <div className="box-tools">
                 <button className="btn btn-danger" onClick={reportPopup}>Report User</button>
                 <button type="button" className="btn btn-success btn-lg" onClick={videoPopup}><span className="glyphicon glyphicon-facetime-video" /> Start Video Chat</button>
-                <Link to="/space/travel"><button className="btn btn-primary" onClick={decrementRoomNum}>Next Conversation</button></Link>
+                <Link to={`/space/${topic()}`}><button className="btn btn-primary" onClick={decrementRoomNum}>Next Conversation</button></Link>
               </div>
               <br /><br />
             </div>

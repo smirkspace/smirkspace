@@ -19,7 +19,10 @@ html {
   overflow: scroll
 }
 h1,
-h2,
+h2{
+    font-size: 36;
+    font-family: 'Lobster', cursive;
+}
 h3,
 h4,
 h5,
@@ -76,7 +79,7 @@ p {
   }
 }
 
-.btn {
+/*.btn {
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -87,7 +90,7 @@ p {
   font-size:14px;
   border: solid #FFF 2px;
   color: #FFF;
-}
+}*/
 .btn-default {
   border: 3px solid #FFF;
   color: #FFF;
@@ -120,3 +123,40 @@ p {
   text-decoration: none;
   color: #FFF;
 }
+.btn-main{
+  border-radius: 10px 20px;
+  background-color: Transparent;
+  padding: 10px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  border: none;
+/*  border-radius: 15px;*/
+/*  box-shadow: 0 9px #999;
+*/}
+
+/*.btn:hover {
+  
+}*/
+
+/*.my_button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.my_button:hover {background-color: #3e8e41}
+
+.my_button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);*/

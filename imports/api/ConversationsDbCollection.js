@@ -51,3 +51,8 @@ export function spaceGen() {
 
   return instance;
 }
+
+export function resendVerif() {
+  Meteor.call('resend');
+  alert('Verification email resent. Please check your inbox.');
+}

@@ -7,16 +7,22 @@ import Splash from '../imports/ui/Splash';
 import Dashboard from '../imports/ui/Dashboard';
 import AboutUs from '../imports/ui/AboutUs';
 import SpaceFrame from '../imports/ui/SpaceFrame';
+import VerifyEmail from '../imports/ui/VerifyEmail';
 import ContactUs from '../imports/ui/ContactUs';
-
 import '../imports/startup/accounts-config';
 import { Conversations } from '../imports/api/ConversationsDbCollection';
+import { Button } from '../imports/ui/SpaceButton';
 
 // if the user is not logged in, redirect them to the splash page
 function requireAuth(nextState, replace) {
   if (!Meteor.user()) {
     replace({
       pathname: '/splash',
+      state: { nextPathname: nextState.location.pathname },
+    });
+  } else if (!Meteor.user().emails[0].verified) {
+    replace({
+      pathname: '/verifyEmail',
       state: { nextPathname: nextState.location.pathname },
     });
   }
@@ -80,12 +86,13 @@ Meteor.startup(() => {
       <Route path="/" component={AppFrame}>
         <IndexRedirect to="dashboard" />
         <Route path="splash" component={Splash} />
+        <Route path="verifyEmail" component={VerifyEmail} />
         <Route path="contact-us" component={ContactUs} />
         <Route path="about-us" component={AboutUs} />
         <Route path="dashboard" component={Dashboard} onEnter={requireAuth} />
-        <Route path="space" onEnter={requireAuth} >
+        <Route path="space" onEnter={requireAuth} component={SpaceFrame} >
           <IndexRedirect to="/dashboard" />
-          <Route path="travel" component={SpaceFrame} onLeave={decrementRoomNum} />
+          <Route path=":buttonName" component={Button} onLeave={decrementRoomNum} />
         </Route>
         <Route path="*" component={Splash} />
       </Route>

@@ -59,6 +59,9 @@ p {
 .intro .intro-body .brand-heading {
   font-size: 40px;
 }
+.intro .intro-body .brand-heading2 {
+  font-size: 30px;
+}
 .intro .intro-body .intro-text {
   font-size: 18px;
 }
@@ -69,6 +72,10 @@ p {
   }
   .intro .intro-body .brand-heading {
     font-size: 100px;
+    font-family: "comic_andy","Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .intro .intro-body .brand-heading2 {
+    font-size: 75px;
     font-family: "comic_andy","Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   .intro .intro-body .intro-text {

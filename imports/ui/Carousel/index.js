@@ -1,6 +1,6 @@
-import Slider from "react-slick";
-import Button from "../SpaceButton";
-import React, { Component } from "react";
+import Slider from 'react-slick';
+import Button from '../SpaceButton';
+import React, { Component } from 'react';
 
 const NextArrow = React.createClass({
   render() {
@@ -51,7 +51,7 @@ export default class Carousel extends Component {
             <br />
             <h3>
               <div className="travel_button">
-                <Button source="images/new_travel.jpg" spaceIsDeployed="true" buttonName="travel"/>
+                <Button source="images/new_travel.jpg" spaceIsDeployed="true" buttonName="travel" />
               </div>
             </h3>
           </div>
@@ -61,7 +61,7 @@ export default class Carousel extends Component {
             <br />
             <h3>
               <div className="parenting_button">
-                <Button source="images/Parenting.jpg" buttonName="parenting"/>
+                <Button source="images/Parenting.jpg" buttonName="parenting" />
               </div>
             </h3>
           </div>
@@ -71,7 +71,7 @@ export default class Carousel extends Component {
             <br />
             <h3>
               <div className="insomnia_button">
-                <Button source="images/insomnia.png" buttonName="insomnia"/>
+                <Button source="images/insomnia.png" buttonName="insomnia" />
               </div>
             </h3>
           </div>
@@ -81,7 +81,7 @@ export default class Carousel extends Component {
             <br />
             <h3>
               <div className="lgbt_button">
-                <Button source="images/LGBT.jpg" buttonName="lgbt"/>
+                <Button source="images/LGBT.jpg" buttonName="lgbt" />
               </div>
             </h3>
           </div>
@@ -91,7 +91,7 @@ export default class Carousel extends Component {
             <br />
             <h3>
               <div className="fitness_button">
-                <Button source="images/workout.jpg" buttonName="fitness"/>
+                <Button source="images/workout.jpg" buttonName="fitness" />
               </div>
             </h3>
           </div>
@@ -101,7 +101,7 @@ export default class Carousel extends Component {
             <br />
             <h3>
               <div className="got_button">
-                <Button source="images/thrones.jpg" buttonName="got"/>
+                <Button source="images/thrones.jpg" buttonName="got" />
               </div>
             </h3>
           </div>

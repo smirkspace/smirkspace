@@ -120,3 +120,6 @@ p {
   text-decoration: none;
   color: #FFF;
 }
+myModal{
+  z-index: 999;
+}

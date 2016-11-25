@@ -5,6 +5,7 @@ import Carousel from '../Carousel';
 
 import Blurb from '../BlurbModal';
 
+
 export default function Dashboard() {
   return (
     <div>
@@ -21,12 +22,8 @@ export default function Dashboard() {
           </div>
         </div>
       </header>
-      <div className="row">
-        <div className="col-sm-10 col-md-offset-1">
-          <div> <Blurb /> </div>
-          
-        </div>
-      </div>
+        <div> <Carousel /> </div>
+        <div> <Blurb blurb="WHATS UP!!" /> </div>
     </div>
   );
 }

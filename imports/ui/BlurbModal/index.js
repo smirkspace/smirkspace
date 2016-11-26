@@ -16,10 +16,13 @@ export default class Blurb extends React.Component{
 	        <div>
 	        <button onClick={() => this.openModal()}>Open modal</button>
   	          <Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
-  	            <h1> Modal title</h1>
-  	            <p> hello</p>
-  	            <p> {this.props.blurb} </p>
-  	            <p> <button onClick={() => this.closeModal()}>Close</button></p>
+  	            <h2> Before you enter, fill in the blanks! </h2>
+                <h6> My name is {this.props.name} </h6>
+                <h6> I'm joining the { this.props.room } because of ... </h6>
+  	            <form className='new-blurb' >
+                  <input type="text" ref="textInput" placeholder="Enter a blurb about yourself!"/>
+                </form>
+  	            <h6> <button onClick={() => this.closeModal()}>Close</button> </h6>
   	          </Modal>
 	        </div>
 	    );
@@ -36,6 +39,8 @@ export default class Blurb extends React.Component{
 
 Blurb.propTypes = {
   blurb: PropTypes.string,
+  room: PropTypes.string,
+  username: PropTypes.string,
 };
 
 class Modal extends React.Component {
@@ -85,7 +90,7 @@ class Modal extends React.Component {
 
       return (
         <div className="intro">
-          <div className="modal-container" style={modalStyle}>
+           <div className="modal-container" style={modalStyle}>
             {this.props.children}
           </div>
 

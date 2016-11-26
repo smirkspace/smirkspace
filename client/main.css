@@ -155,8 +155,8 @@ p {
   height: auto;
   padding: 100px;
   transform: translate(-50%, -50%),
-/*  text-align: center;
-*/color: black;
+  text-align: center;
+  color: black;
   text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
   border-radius: 25px;
   border: 2px solid #73AD21;
@@ -165,4 +165,8 @@ p {
   display: table-cell;
   vertical-align: middle;
   padding-top: 100px;
+}
+.new-blurb{
+    font-size: 36;
+    font-family: 'Lobster', cursive;
 }

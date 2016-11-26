@@ -23,7 +23,7 @@ export default function Dashboard() {
         </div>
       </header>
         <div> <Carousel /> </div>
-        <div> <Blurb blurb="WHATS UP!!" /> </div>
+        <div> <Blurb room='travel' name='Some name' /> </div>
     </div>
   );
 }

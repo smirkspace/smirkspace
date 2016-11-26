@@ -136,15 +136,33 @@ p {
     z-index: 9998;
     background: rgba(0, 0, 0, 0.3);
   }
+.modal_element {
+    /* set border styling */
+    border-color: black;
+    border-style: solid;
+    border-width: 10px;
 
-.modal {
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -150px;
-    margin-left: -150px;
-    z-index: 9999;
-    background: yellow;
-  }
+    /* set border roundness */
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+.modal-container {
+  top: 50%,
+  left: 50%
+  display: table;
+  width: 40%;
+  height: auto;
+  padding: 100px;
+  transform: translate(-50%, -50%),
+/*  text-align: center;
+*/color: black;
+  text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+}
+.modal-container .modal, .modal-backdrop {
+  display: table-cell;
+  vertical-align: middle;
+  padding-top: 100px;
+}

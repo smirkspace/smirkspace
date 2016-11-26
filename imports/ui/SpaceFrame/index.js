@@ -7,7 +7,7 @@ import Blaze from 'meteor/gadicc:blaze-react-component';
 import { Conversations, spaceGen } from '../../api/ConversationsDbCollection';
 import { } from '../SpaceButton/index';
 import { countHandler } from '../../api/CountersDbCollection';
-
+import '../../../client/styles/simpleChatStyleOverwrite.css';
 
 export default function SpaceFrame() {
   Meteor.subscribe('conversations');
@@ -68,22 +68,18 @@ export default function SpaceFrame() {
 
   return (
     <div className="container">
-      <div className="row">
-        <div className="col-sm-12 col-sm-offset-4">
-          <h3 style={{ color: 'white' }}>Conversation topic: {topic()}</h3>
+      <div className="row topic-title-row">
+        <div className="col-md-6 col-md-offset-1">
+          <p className="topic-title">You are now talking about {topic()}    <span className="glyphicon glyphicon-thumbs-up" /></p>
         </div>
       </div>
       <div className="row">
-        <div className=" col-md-8 col-md-offset-2" >
+        <div className=" col-md-10 col-md-offset-1" >
           <div className="box box-info direct-chat direct-chat-info">
             <div className="box-header with-border">
-              <h3 className="box-title">Room ID: {space}</h3>
-              <div className="box-tools">
-                <button className="btn btn-danger" onClick={reportPopup}>Report User</button>
-                <button type="button" className="btn btn-success btn-lg" onClick={videoPopup}><span className="glyphicon glyphicon-facetime-video" /> Start Video Chat</button>
-                <Link to={`/space/${topic()}`}><button className="btn btn-primary" onClick={decrementRoomNum}>Next Conversation</button></Link>
-              </div>
-              <br /><br />
+              <button className="btn btn-danger report-button" onClick={reportPopup}><span className="glyphicon glyphicon-minus-sign" /> Report</button>
+              <button type="button" className="btn btn-success video-button" onClick={videoPopup}><span className="glyphicon glyphicon-facetime-video" /> Start Video Chat</button>
+              <Link to={`/space/${topic()}`}><button className="btn btn-primary next-button" onClick={decrementRoomNum}><span className="glyphicon glyphicon-circle-arrow-right" /> Next</button></Link>
             </div>
             <div>
               <Blaze template="SimpleChatWindow" roomId={space} username={Meteor.user().username} />

@@ -1,0 +1,33 @@
+.box-body {
+    height: 320px;
+}
+
+.direct-chat-messages {
+    height: 320px;
+}
+
+.direct-chat-info {
+    font-size: 13.5px;
+}
+
+.direct-chat-msg {
+    margin-bottom: 7px; 
+}
+
+.btn.btn-danger.report-button {
+    border-radius: 15px;
+    width: 12%;
+}
+
+.btn.btn-success.video-button {
+    border-radius: 15px; 
+    position:relative;
+    left:29%;
+}
+
+.btn.btn-primary.next-button {
+    border-radius: 15px;
+    position:relative;
+    left:56.5%;
+    width: 12%;
+}

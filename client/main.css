@@ -127,3 +127,18 @@ p {
   text-decoration: none;
   color: #FFF;
 }
+
+.topic-title {
+  color: black;
+  font-weight: bold;
+  position: relative;
+  left: 35%;
+  background-color: white;
+  border: 3px solid #00c0ef;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.row.topic-title-row {
+  /*do stuff here*/
+}

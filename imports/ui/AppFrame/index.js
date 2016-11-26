@@ -20,7 +20,7 @@ class AppFrame extends Component {
 
   render() {
     return (
-      <div className="container-fluid no-padding" no-padding>
+      <div className="container-fluid no-padding">
         <Navbar />
         <div className="content">
           {this.props.children}

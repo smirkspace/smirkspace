@@ -1,40 +1,5 @@
-/*.div1 {
-   position:relative;
-   left:0px;
-   margin-left: 0px;
-   margin-right: 0px;
-   text-align: left;
-   width:100%;
-   background:#ffffff;
-   padding: 3rem;
-   color: #000000;
-   border-top: 1px solid #353535;
-   height: 100vh;
-   opacity: 0.7;
-}
-.div2 {
-  position:relative;
-  width:100%;
-  text-align: left;
-  background:#031932;
-  padding: 5rem;
-  color: #ffffff;
-  border-top: 1px solid #353535;
-  height: 70vh;
-}
-.div3 {
-   position:relative;
-   text-align: left;
-   background:#ffffff;
-   padding: 5rem;
-   color: #000000;
-   border-top: 1px solid #353535;
-   height: 70vh;
-   background: rgba( 255,255,255,0.6 );
-}*/
-
 .table22 {
-  position: absolute;
+  position: relative;
   width: 100%;
   margin: 0vh;
   left: 0;
@@ -61,8 +26,6 @@
   background-image: url('./images/back.png');
   background-size: cover;
   vertical-align: top;
-  text-align: left;
-  margin-right: 10vh;
   padding: 10rem;
   border-top: 1px bold #000000;
 }
@@ -70,7 +33,6 @@
   background: rgba( 255,255,255,1 );
   color: #000000;
   height: 90vh;
-  vertical-align: top;
   text-align: left;
   padding: 10rem;
 }
@@ -78,18 +40,9 @@
   float: right;
   margin-right: 5vh;
 }
-.iframe33 {
-}
-.img22 {
-  float: right;
-  margin-right: 150px;
-}
 .img23 {
   float: left;
   margin-left: 80px;
-}
-.img33 {
-  opacity: 1;
 }
 .paragraph11 {
   float: left;
@@ -107,6 +60,9 @@
 }
 .paragraph33 {
   float: left;
+  font-weight: bold;
+  font-family: arial;
+  font-size: 30px;
   text-align: left;
   width: 40%;
   margin: 0.5em;
@@ -114,38 +70,47 @@
   font-style: normal;
 }
 .paragraph44 {
-  width: 30%;
-  margin-left: 20px;
+  font-family: arial;
+  width: 80%;
+  margin: 0.5em;
   text-align: left;
   color: #ffffff;
-  font-style: normal;
+  font-weight: normal;
 }
 .paragraph55 {
- margin: 0px;
+ font-weight: bold;
+ font-family: arial;
+ margin: 0vh;
  color: #000000;
  font-size: 50px;
  font-style: normal;
+ line-height: 80%;
 }
 .paragraph66 {
-  margin-left: 10vh;
+  margin-left: 0vh;
   color: #000000;
   font-style: normal;
-  font-size: 30px;
+  font-size: 25px;
 }
 .paragraph77 {
-  float: right;
-  right: 30vh;
-  width: 40%;
+  position: absolute;
+  font-weight: bold;
+  font-family: arial;
+  width: 30%;
   color: #000000;
   font-style: normal;
   font-size: 30px;
+  float: right;
+  margin-top: 4vh;
+  right: 2vh;
 }
 .paragraph88 {
   position: absolute;
+  font-family: arial;
   float: right;
   width: 30%;
   margin-top: 10vh;
-  right: 0vh;
+  right: 2vh;
   color: #000000;
   font-style: normal;
   font-size: 30px;
@@ -178,54 +143,16 @@
 }
 .go_top {
   background-color: #ffffff;
-  position: absolute;
+  position: relative;
   width: 150px;
   height: 60px;
-  right: 60vh;
-  bottom: 74vh;
-  border-style: ridge;
-  box-shadow: 3px 3px 10px #000000;
-  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #ffffff));
-  background:-moz-linear-gradient(top, #ffffff 5%, #ffffff 100%);
-  background:-webkit-linear-gradient(top, #ffffff 5%, #ffffff 100%);
-  background:-o-linear-gradient(top, #ffffff 5%, #ffffff 100%);
-  background:-ms-linear-gradient(top, #ffffff 5%, #ffffff 100%);
-  background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0);
-  background-color:#ffffff;
-  -moz-border-radius:3px;
-  -webkit-border-radius:3px;
-  border-radius:3px;
-  border:1px solid #fffff;
-  display:inline-block;
+  border-radius:7px;
+  border:1px solid #b7b7b7;
   color:#000000;
-  padding:6px 24px;
-  text-decoration:none;
-  letter-spacing: 2px;
+  font-size: 25px;
+  font-family: Verdana;
 }
-a {
-  font-style: normal;
-  color: #000000;
-  text-decoration: none;
-}
-a:hover {
-  font-style: normal;
-  color: #000000;
-  text-decoration: none;
-}
-a:selected {
-  font-style: normal;
-  color: #000000;
-  text-decoration: none;
-}
-a:visited {
-  font-style: normal;
-  color: #000000;
-  text-decoration: none;
-}
-a:link {
+a:hover, a:active, a:visited, a:link {
   font-style: normal;
   color: #000000;
   text-decoration: none;

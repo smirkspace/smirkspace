@@ -4,6 +4,7 @@ import { Meteor } from 'meteor/meteor';
 import { createContainer } from 'meteor/react-meteor-data';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import './index.css';
 
 class AppFrame extends Component {
   componentWillReceiveProps(nextProps) {
@@ -19,7 +20,7 @@ class AppFrame extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container-fluid no-padding" no-padding>
         <Navbar />
         <div className="content">
           {this.props.children}

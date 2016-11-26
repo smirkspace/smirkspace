@@ -22,9 +22,13 @@ Bridget Rassell [bridget.rassell@gmail.com]
 
 ## Live Demo Link/Video Link ##
 
-[Live Demo] (http://smirkspace.scalingo.io/)
+[Live Demo] (https://www.smirkspace.com)
 
-[Video Demo] (https://www.youtube.com/watch?v=Iomo-CPjb2g)
+[Video Demo 1] (https://www.youtube.com/watch?v=Iomo-CPjb2g)
+
+[Video Demo 2] (https://www.youtube.com/watch?v=pdOwkcoZfX4)
+
+[Video Demo 3] (https://www.youtube.com/watch?v=a6zcJPBVmqg)
 
 ## Resources/Documentation ##
 

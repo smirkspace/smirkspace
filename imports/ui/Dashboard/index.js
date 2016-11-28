@@ -1,7 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { } from 'react-router';
-import Carousel from '../Carousel';
 import GridView from '../GridView';
 
 export default function Dashboard() {

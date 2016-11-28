@@ -1,5 +1,5 @@
 tr td{
-  padding: 30px;
+  padding: 20px;
   color: #ffffff;
   text-align: center;
   font-family: "verdana";
@@ -7,8 +7,8 @@ tr td{
   font-size: 20px;
 }
 table {
-  margin-left: 50%;
-  margin-right: 50%;
+/*  margin-left: 50%;
+  margin-right: 50%;*/
 
   text-align: center;
   border-collapse:collapse;

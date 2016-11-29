@@ -24,6 +24,7 @@ export default function Dashboard() {
           <div> <Carousel /> </div>
         </div>
       </div>
+      <div className="empty-box" />
     </div>
   );
 }

@@ -91,6 +91,7 @@ export default function SpaceFrame() {
           </div>
         </div>
       </div>
+      <div className="empty-box" />
     </div>
   );
 }

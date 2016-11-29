@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { } from 'react-router';
-import Carousel from '../Carousel';
+import GridView from '../GridView';
 
 import Blurb from '../BlurbModal';
 
@@ -22,8 +22,11 @@ export default function Dashboard() {
           </div>
         </div>
       </header>
-        <div> <Carousel /> </div>
-        <div> <Blurb room='travel' name='Some name' /> </div>
+      <div className='row'>
+          <div className="col-md-10 col-md-offset-1"> <GridView /> </div>
+          <div> <Blurb room='travel' name='Some name' /> </div>
+
+      </div>
     </div>
   );
 }

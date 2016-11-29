@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import './index.css';
-import { countHandler, Counters } from '../../api/CountersDbCollection'
+import { countHandler, Counters } from '../../api/CountersDbCollection';
+import Blurb from '../BlurbModal';
 
 export default function Button(props) {
 
@@ -20,9 +21,10 @@ export default function Button(props) {
 
   const buttonType = props.spaceIsDeployed
   ? (
-    <Link to={'/space/' + props.buttonName}>
-      <input type="image" className="spaceButton" src={props.source} />
-    </Link>
+    // <Link to={'/space/' + props.buttonName}>
+      <input type="image" className="spaceButton" src={props.source} onClick={() => this.openModal()} />
+      <Blurb />
+    // </Link>
     )
   : <input type="image" className="spaceButton" src={props.source} onClick={spaceNotAvailable} />
 

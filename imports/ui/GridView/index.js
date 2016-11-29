@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { } from 'react-router';
 import Button from '../SpaceButton';
+import Blurb from '../BlurbModal';
 
 import './index.css';
 

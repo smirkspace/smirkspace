@@ -55,7 +55,7 @@ Meteor.methods({
 });
 
 Accounts.config({
-  sendVerificationEmail: true,
+  sendVerificationEmail: false,
 });
 
 Meteor.startup(() => {

@@ -1,14 +1,13 @@
 .footer {
-   position:fixed;
+   position: fixed;
    left:0px;
-   bottom:0px;
+   bottom: 0px;
    text-align: center;
    width:100%;
    background:#000000;
    padding: 1.5rem;
    color: #ffffff;
    border-top: 1px solid #353535;
-
 }
 a.link1:visited {
   font-size:20px;

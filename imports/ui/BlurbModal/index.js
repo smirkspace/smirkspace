@@ -16,9 +16,9 @@ export default class Blurb extends React.Component{
 	        <div>
 	        <button onClick={() => this.openModal()}>Open modal</button>
   	          <Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
-  	            <h2> Before you enter, fill in the blanks! </h2>
-                <h6> My name is {this.props.name} </h6>
-                <h6> I'm joining the { this.props.room } because of ... </h6>
+  	            <h7> Before you enter, fill in the blanks! </h7>
+                <h7> My name is {this.props.name} </h7>
+                <h7> I'm joining the { this.props.room } room because of ... </h7>
   	            <form className='new-blurb' >
                   <input type="text" ref="textInput" placeholder="Enter a blurb about yourself!"/>
                 </form>

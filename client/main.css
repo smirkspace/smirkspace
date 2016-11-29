@@ -165,8 +165,12 @@ p {
 .modal-container .modal, .modal-backdrop {
   display: table-cell;
   vertical-align: middle;
-  padding-top: 100px;
+/*  padding-top: 100px;
+*/}
+.modal-text{
+      font-size: 18;
 }
+
 .new-blurb{
     font-size: 36;
     font-family: 'Lobster', cursive;

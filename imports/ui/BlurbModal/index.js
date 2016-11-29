@@ -15,6 +15,7 @@ export default class Blurb extends React.Component{
 	render() {
 		return (
 	        <div>
+          <button onClick={() => this.openModal()}>Open modal</button>
   	          <Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
   	            <h7> Before you enter, fill in the blanks! </h7>
                 <h7> My name is {this.props.name} </h7>

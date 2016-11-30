@@ -18,10 +18,10 @@ export default function Guide() {
           </tr>
           <tr>
             <td className="td22" id="usecase">
-              <p className="paragraph33">Check out a sample user case. </p>
-              <p className="paragraph44">
-                Demonstration of a real-life situation and how to go about it.
-              </p>
+              <div className="text">
+                <p className="paragraph33">Check out a sample user case. </p>
+                <p className="paragraph44">Demonstration of a real-life situation and how to go about it.</p>
+              </div>
               <iframe className="iframe22" width="660" height="415" src="https://www.youtube.com/embed/a6zcJPBVmqg?rel=0&showinfo=0&autohide=1" frameBorder="0" allowFullScreen />
             </td>
           </tr>

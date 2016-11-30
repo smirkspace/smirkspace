@@ -14,10 +14,14 @@
   padding-right: 5rem;
 }
 .td22 {
+  display: flex;
   background-color: #031932;
   color: #ffffff;
-  height: 80vh;
   padding: 5rem;
+}
+.text {
+  display: flex;
+  flex-direction: column;
 }
 .td33 {
   background: rgba( 255,255,255,.8 );
@@ -64,7 +68,6 @@
   font-family: arial;
   font-size: 30px;
   text-align: left;
-  width: 40%;
   margin: 0.5em;
   color: #ffffff;
   font-style: normal;

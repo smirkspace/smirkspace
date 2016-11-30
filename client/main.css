@@ -13,14 +13,14 @@ body {
   -o-background-size: cover;
 }
 html {
-  width: 100%; 
+  width: 100%;
   margin: auto;
   height: 100%;
   overflow: scroll
 }
 h1,
 h2{
-    font-size: 36;
+    font-size: 36px;
     font-family: 'Lobster', cursive;
 }
 h3,
@@ -56,12 +56,6 @@ p {
   display: table-cell;
   vertical-align: middle;
 }
-.intro .intro-body .brand-heading {
-  font-size: 40px;
-}
-.intro .intro-body .brand-heading2 {
-  font-size: 30px;
-}
 .intro .intro-body .intro-text {
   font-size: 18px;
   text-align: center;
@@ -75,27 +69,10 @@ p {
     font-size: 100px;
     font-family: "comic_andy","Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
-  .intro .intro-body .brand-heading2 {
-    font-size: 75px;
-    font-family: "comic_andy","Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
   .intro .intro-body .intro-text {
     font-size: 26px;
   }
 }
-
-/*.btn {
-  text-transform: uppercase;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  border-radius: 0;
-  font-size:14px;
-  border: solid #FFF 2px;
-  color: #FFF;
-}*/
 .btn-default {
   border: 3px solid #FFF;
   color: #FFF;

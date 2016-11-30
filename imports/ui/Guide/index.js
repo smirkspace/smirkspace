@@ -12,33 +12,37 @@ export default function Guide() {
       <table className="table22">
         <tbody>
           <tr>
-            <td className="td11" id="whatwedo">
+            <td className="light-background flex-container column-container" id="what-we-do">
+              <div className="title dark-text">What We Do</div>
               <iframe width="760" height="516" src="http://www.youtube.com/embed/pdOwkcoZfX4?rel=0&showinfo=0&autohide=1" frameBorder="0" allowFullScreen />
             </td>
           </tr>
           <tr>
-            <td className="td22" id="usecase">
-              <div className="text">
-                <p className="paragraph33">Check out a sample user case. </p>
-                <p className="paragraph44">Demonstration of a real-life situation and how to go about it.</p>
+            <td className="dark-background flex-container" id="user-story">
+              <div className="column-container">
+                <div className="title light-text">User Story</div>
+                <div className="light-text">A real-life situation and how SmirkSpace can help.</div>
               </div>
-              <iframe className="iframe22" width="660" height="415" src="https://www.youtube.com/embed/a6zcJPBVmqg?rel=0&showinfo=0&autohide=1" frameBorder="0" allowFullScreen />
+              <iframe width="660" height="415" src="https://www.youtube.com/embed/a6zcJPBVmqg?rel=0&showinfo=0&autohide=1" frameBorder="0" allowFullScreen />
             </td>
           </tr>
           <tr>
-            <td className="td44">
-              <img className="img23" alt="topics" width="500" height="450" src="/images/back5.png" />
-              <p className="paragraph77">Variety of Different Topics</p>
-              <p className="paragraph88">Choose a favourite topic or create a new one and start chatting. You will be matched
-              instantly to the first person available.
-              </p>
+            <td className="light-background flex-container">
+              <img alt="topics" width="500" height="450" src="/images/back5.png" />
+              <div className="column-container">
+                <div className="title dark-text">A Variety of Different Topics</div>
+                <div className="dark-text">
+                  Choose your favourite topic and start chatting.
+                  You will be matched to the first available person.
+                </div>
+              </div>
             </td>
           </tr>
           <tr>
-            <td className="td33" id="bottom_splash">
-              <p className="paragraph55">Fun. Easy. Free</p>
-              <p className="paragraph66">Sign up today and start connecting&nbsp;<button className="go_top"><a href="#" className="scrollup">Sign up</a></button>
-              </p>
+            <td className="flex-container column-container" id="bottom-splash">
+              <div className="title dark-text">Fun. Easy. Free.</div>
+              <div className="offset dark-text">Sign up today and start connecting.&nbsp;<button className="go_top"><a href="#" className="scrollup">Sign up</a></button>
+              </div>
             </td>
           </tr>
         </tbody>

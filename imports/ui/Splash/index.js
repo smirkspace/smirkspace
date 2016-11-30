@@ -15,33 +15,33 @@ export default function Splash() {
             </div>
 
             <div className="row">
-                  <img src="images/space-ship-logo.png" alt="space-ship-logo" height="30%" width="30%"></img>
+              <img src="images/space-ship-logo.png" alt="space-ship-logo" height="30%" width="30%" />
             </div>
             <div className="row">
               <div className="col-md-2 col-md-offset-3">
-                <a href="#whatwedo">
+                <a href="#what-we-do">
                   <button type="button" className="btn btn-main">
-                    <h2> What we do <span className="glyphicon glyphicon-globe" aria-hidden="true" /></h2>
+                    <h2> What We Do <span className="glyphicon glyphicon-globe" aria-hidden="true" /></h2>
                   </button>
                 </a>
               </div>
               <div className="col-md-2">
-                <a href="#usecase">
+                <a href="#user-story">
                   <button type="button" className="btn btn-main">
-                    <h2> User stories <span className="glyphicon glyphicon-user" aria-hidden="true" /></h2>
+                    <h2> User Story <span className="glyphicon glyphicon-user" aria-hidden="true" /></h2>
                   </button>
                 </a>
               </div>
               <div className="col-md-2">
-                <a href="#bottom_splash">
+                <a href="#bottom-splash">
                   <button type="button" className="btn btn-main">
-                    <h2> Why us <span className="glyphicon glyphicon-eye-open" aria-hidden="true" /></h2>
+                    <h2> Why Us? <span className="glyphicon glyphicon-eye-open" aria-hidden="true" /></h2>
                   </button>
                 </a>
               </div>
             </div>
-              
-            
+
+
           </div>
         </div>
       </header>

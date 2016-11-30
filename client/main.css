@@ -128,6 +128,29 @@ p {
   text-decoration: none;
   color: #FFF;
 }
+
+.col-md-10.col-md-offset-1.title-div {
+  position: relative;
+  text-align: center;
+}
+
+.topic-title {
+  width: 100%;
+  color: black;
+  font-weight: bold;
+  position: relative;
+  background-color: white;
+  border: 3px solid #00c0ef;
+  border-radius: 15px;
+  text-align: center;
+  min-width: 400px;
+}
+
+.btn.btn-primary.next-button:active {
+  padding-right: 3px;
+  -webkit-transition: 0.1s;
+}
+
 .btn-main{
   border-radius: 10px 20px;
   background-color: Transparent;

@@ -15,15 +15,24 @@ export default class Blurb extends React.Component{
 	render() {
 		return (
 	        <div>
-          <button onClick={() => this.openModal()}>Open modal</button>
+            <button onClick={() => this.openModal()}>Open modal</button>
+
   	          <Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
-  	            <h7> Before you enter, fill in the blanks! </h7>
-                <h7> My name is {this.props.name} </h7>
-                <h7> I'm joining the { this.props.room } room because of ... </h7>
-  	            <form className='new-blurb' >
-                  <input type="text" ref="textInput" placeholder="Enter a blurb about yourself!"/>
-                </form>
-  	            <h6> <button onClick={() => this.closeModal()}>Close</button> </h6>
+
+                <div className="modal">
+                  <div class="modal fade">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                          <div className="modal-title"> My name is {this.props.name} </div>
+                          <div className="modal-body modal-text"> I'm joining the { this.props.room } room because of ... </div>
+          	               <form className='modal-body' >
+                            <textarea name="blurb" form="new-blurb" mask='Enter a blurb about yourself...' height="50" width="70"></textarea>
+                          </form>
+          	             <h6> <button onClick={() => this.closeModal()}>Close</button> </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
   	          </Modal>
 	        </div>
 	    );
@@ -57,7 +66,7 @@ class Modal extends React.Component {
         left: '50%',
         transform: 'translate(-50%, -50%)',
         zIndex: '9999',
-        background: '#FFF',
+        background: '#f7faff',
       }
 
       if (this.props.width && this.props.height) {
@@ -91,13 +100,13 @@ class Modal extends React.Component {
       }
 
       return (
-        <div className="intro">
-           <div className="modal-container" style={modalStyle}>
+        <div>
+          <div className='modal-container' style={modalStyle}>
             {this.props.children}
           </div>
-
-          <div className= {this.props.backdropClassName} style={backdropStyle} onClick={e => this.close(e)} >
-          </div>
+          {!this.props.noBackdrop &&
+              <div className={this.props.backdropClassName} style={backdropStyle}
+                   onClick={e => this.close(e)}/>}
         </div>
       );
     }

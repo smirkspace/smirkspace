@@ -30,5 +30,13 @@ Bridget Rassell [bridget.rassell@gmail.com]
 
 [Video Demo 3] (https://www.youtube.com/watch?v=a6zcJPBVmqg)
 
+## Resources/Documentation ##
+  
+ [Slack](https://startup-programming.slack.com/)
+ 
+ [Our Wiki](https://github.com/smirkspace/smirkspace/wiki)
+ 
+ [BackHub](https://backhub.co)
+ 
 ## Contact us! ##
 You can reach us at smirkspace@gmail.com, feel free to provide us with feedback or any concerns

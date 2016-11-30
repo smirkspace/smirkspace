@@ -22,19 +22,13 @@ Bridget Rassell [bridget.rassell@gmail.com]
 
 ## Live Demo Link/Video Link ##
 
-[Live Demo] (http://smirkspace.scalingo.io/)
+[Live Demo] (https://www.smirkspace.com)
 
-[Video Demo] (https://www.youtube.com/watch?v=Iomo-CPjb2g)
+[Video Demo 1] (https://www.youtube.com/watch?v=Iomo-CPjb2g)
 
-## Resources/Documentation ##
+[Video Demo 2] (https://www.youtube.com/watch?v=pdOwkcoZfX4)
 
-[Google Drive] (https://drive.google.com/drive/folders/0B0Ljy1h1W8BDbmF1YlQ1Qjk3dWM?usp=sharing)
-
-[Slack] (https://startup-programming.slack.com/)
-
-[Our Wiki](https://github.com/smirkspace/smirkspace/wiki)
-
-[BackHub](https://backhub.co)
+[Video Demo 3] (https://www.youtube.com/watch?v=a6zcJPBVmqg)
 
 ## Contact us! ##
 You can reach us at smirkspace@gmail.com, feel free to provide us with feedback or any concerns

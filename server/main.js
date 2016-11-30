@@ -55,7 +55,7 @@ Meteor.methods({
 });
 
 Accounts.config({
-  sendVerificationEmail: true,
+  sendVerificationEmail: false,
 });
 
 Meteor.startup(() => {
@@ -75,6 +75,6 @@ Meteor.startup(() => {
   };
 
   Accounts.emailTemplates.verifyEmail.html = function (user, url) {
-    return `<h1>Welcome to SmirkSpace!</h1></br></br> <p>You are moments away from sharing real conversations with users just like you!</p></br><p>Click the button below to verify your account,</p></br><button type="button"><a href="${url}">Verify eMail</a></button>`;
+    return `<h1>Welcome to SmirkSpace!</h1></br></br> <p>You are moments away from sharing real conversations with users just like you!</p></br><p>Click the link below to verify your account,</p></br><a href="${url}">Verify eMail</a>`;
   };
 });

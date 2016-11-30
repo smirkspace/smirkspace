@@ -6,6 +6,9 @@
     "lint": "eslint .;exit 0",
     "pretest": "npm run lint --silent"
   },
+  "engines": {
+    "node": "4.x"
+  },
   "dependencies": {
     "bcrypt": "^0.8.7",
     "jquery": "2.2.0",
@@ -25,8 +28,5 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-meteor": "^4.0.1",
     "eslint-plugin-react": "^6.7.1"
-  },
-  "engines": {
-    "node": "4.1.1"
   }
 }

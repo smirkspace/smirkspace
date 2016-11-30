@@ -17,17 +17,33 @@
 .btn.btn-danger.report-button {
     border-radius: 15px;
     width: 12%;
+    min-width: 100px;
+    float: left;
 }
 
 .btn.btn-success.video-button {
     border-radius: 15px; 
     position:relative;
-    left:29%;
 }
 
 .btn.btn-primary.next-button {
     border-radius: 15px;
     position:relative;
-    left:56.5%;
+    float:right;
     width: 12%;
+    min-width: 100px;
+}
+
+.box.box-info.direct-chat.direct-chat-info {
+    min-width: 400px;
+}
+
+.box-header.with-border {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.box-header.with-border button {
+    display: inline-block;
 }

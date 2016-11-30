@@ -128,17 +128,25 @@ p {
   color: #FFF;
 }
 
+.col-md-10.col-md-offset-1.title-div {
+  position: relative;
+  text-align: center;
+  margin-bottom: -20px;
+}
+
 .topic-title {
+  width: 100%;
   color: black;
   font-weight: bold;
   position: relative;
-  left: 35%;
   background-color: white;
   border: 3px solid #00c0ef;
   border-radius: 15px;
   text-align: center;
+  min-width: 400px;
 }
 
-.row.topic-title-row {
-  /*do stuff here*/
+.btn.btn-primary.next-button:active {
+  padding-right: 3px;
+  -webkit-transition: 0.1s;
 }

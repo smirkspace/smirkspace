@@ -68,13 +68,13 @@ export default function SpaceFrame() {
 
   return (
     <div className="container">
-      <div className="row topic-title-row">
-        <div className="col-md-6 col-md-offset-1">
+      <div className="row">
+        <div className="col-md-10 col-md-offset-1 title-div">
           <p className="topic-title">You are now talking about {topic()}    <span className="glyphicon glyphicon-thumbs-up" /></p>
         </div>
       </div>
       <div className="row">
-        <div className=" col-md-10 col-md-offset-1" >
+        <div className="col-md-10 col-md-offset-1" >
           <div className="box box-info direct-chat direct-chat-info">
             <div className="box-header with-border">
               <button className="btn btn-danger report-button" onClick={reportPopup}><span className="glyphicon glyphicon-minus-sign" /> Report</button>

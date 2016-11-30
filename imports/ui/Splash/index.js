@@ -10,10 +10,9 @@ export default function Splash() {
             <div className="row">
               <div className="col-md-8 col-md-offset-2">
                 <h1 className="brand-heading">SmirkSpace</h1>
-                <p className="intro-text">    Connecting People Through Conversation</p>
+                <p className="intro-text">Connecting People Through Conversation</p>
               </div>
             </div>
-
             <div className="row">
               <img src="images/space-ship-logo.png" alt="space-ship-logo" height="30%" width="30%" />
             </div>
@@ -40,8 +39,6 @@ export default function Splash() {
                 </a>
               </div>
             </div>
-
-
           </div>
         </div>
       </header>

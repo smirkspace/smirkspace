@@ -5,7 +5,6 @@ import GridView from '../GridView';
 
 export default function Dashboard() {
   return (
-
     <div>
       <header className="intro">
         <div className="intro-body">

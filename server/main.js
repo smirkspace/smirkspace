@@ -46,10 +46,9 @@ SimpleChat.configure({
 });
 
 Meteor.methods({
-  'resend': function () {
+  resend() {
     const id = Meteor.user()._id;
     Accounts.sendVerificationEmail(id);
-    console.log('verification email sent');
     return true;
   },
 });

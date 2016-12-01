@@ -4,16 +4,24 @@ import './index.css';
 import { countHandler, Counters } from '../../api/CountersDbCollection';
 import Blurb from '../BlurbModal';
 
-export default function Button(props) {
+export default class Button extends Component{
 
-  function openModal(){
+  constructor(props) {
+      super(props)
+        this.state = { 
+          isModalOpen: false, 
+          spaceIsDeployed: false,
+        }
+    }
+
+  openModal(){
     this.openModal();
 
   }
 
   // Function to give alerts for buttons not yet made
   // And to incrememnt counters for fake doors
-  function spaceNotAvailable() {
+  spaceNotAvailable() {
     
     //call function within the CountersDbCollection file
     //will create a DB object if button is being clicked for the first time
@@ -24,15 +32,17 @@ export default function Button(props) {
     alert('This space is still being developed.\nCheck back soon!');
   }
 
-  const buttonType = props.spaceIsDeployed
+  static buttonType = props.spaceIsDeployed
   ? (
-    // <Link to={'/space/' + props.buttonName}>
+    <Link to={'/space/' + props.buttonName}>
       <input type="image" className="spaceButton" src={props.source} onClick= {openModal} />
-    // </Link>
+    </Link>
     )
   : <input type="image" className="spaceButton" src={props.source} onClick={spaceNotAvailable} />
 
-  return buttonType;
+  render() {
+    return buttonType;
+  }
 }
 
 Button.propTypes = {

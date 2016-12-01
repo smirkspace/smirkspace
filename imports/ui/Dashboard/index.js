@@ -5,7 +5,7 @@ import GridView from '../GridView';
 
 export default function Dashboard() {
   return (
-    
+
     <div>
       <header className="intro">
         <div className="intro-body">
@@ -20,9 +20,7 @@ export default function Dashboard() {
           </div>
         </div>
       </header>
-      <div className='row'>
-          <div className="col-md-10 col-md-offset-1"> <GridView /> </div>
-      </div>
+      <GridView />
     </div>
   );
 }

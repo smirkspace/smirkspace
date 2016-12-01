@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import './index.css';
-import { countHandler, Counters } from '../../api/CountersDbCollection';
+import { countHandler } from '../../api/CountersDbCollection';
 
 export default function Button(props) {
   // Function to give alerts for buttons not yet made

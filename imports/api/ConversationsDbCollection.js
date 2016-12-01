@@ -9,6 +9,8 @@ if (Meteor.isServer) {
 }
 
 export function spaceGen() {
+
+  window.scrollTo(0,0);
   Meteor.subscribe('conversations');
   const url = window.location.href;
   let index = url.length - 1;

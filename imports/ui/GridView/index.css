@@ -1,15 +1,11 @@
-tr td{
-  padding: 20px;
-  color: #ffffff;
-  text-align: center;
-  font-family: "verdana";
-  font-style: oblique;
-  font-size: 20px;
+.buttonGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 74%;
+  margin: auto;
 }
-table {
-/*  margin-left: 50%;
-  margin-right: 50%;*/
-
-  text-align: center;
-  border-collapse:collapse;
+.buttonGrid div {
+  padding: 20px;
 }

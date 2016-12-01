@@ -31,6 +31,8 @@ Bridget Rassell [bridget.rassell@gmail.com]
 [Video Demo 3] (https://www.youtube.com/watch?v=a6zcJPBVmqg)
 
 ## Resources/Documentation ##
+
+ [Google Drive](https://drive.google.com/drive/folders/0B0Ljy1h1W8BDbmF1YlQ1Qjk3dWM?usp=sharing)
   
  [Slack](https://startup-programming.slack.com/)
  

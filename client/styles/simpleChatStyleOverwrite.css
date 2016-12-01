@@ -47,3 +47,7 @@
 .box-header.with-border button {
     display: inline-block;
 }
+
+.navbar.navbar-inverted {
+  margin-bottom: 0;
+}

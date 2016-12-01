@@ -23,7 +23,6 @@ export default function Dashboard() {
       <div className='row'>
           <div className="col-md-10 col-md-offset-1"> <GridView /> </div>
       </div>
-      <div className="empty-box" />
     </div>
   );
 }

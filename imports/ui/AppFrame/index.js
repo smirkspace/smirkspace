@@ -25,7 +25,9 @@ class AppFrame extends Component {
         <div className="content">
           {this.props.children}
         </div>
-        <Footer />
+        <div className="footer-div">
+          <Footer />
+        </div>
       </div>
     );
   }

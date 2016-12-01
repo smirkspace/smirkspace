@@ -124,8 +124,9 @@ p {
   min-width: 400px;
 }
 
-.empty-box {
-  height: 55px;
+.footer-div {
+  position: relative;
+  padding-top: 5%;
 }
 
 .btn.btn-primary.next-button:active {

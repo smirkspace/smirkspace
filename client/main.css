@@ -13,14 +13,14 @@ body {
   -o-background-size: cover;
 }
 html {
-  width: 100%; 
+  width: 100%;
   margin: auto;
   height: 100%;
   overflow: scroll
 }
 h1,
 h2{
-    font-size: 36;
+    font-size: 36px;
     font-family: 'Lobster', cursive;
 }
 h3,
@@ -64,12 +64,6 @@ p {
   display: table-cell;
   vertical-align: middle;
 }
-.intro .intro-body .brand-heading {
-  font-size: 40px;
-}
-.intro .intro-body .brand-heading2 {
-  font-size: 30px;
-}
 .intro .intro-body .intro-text {
   font-size: 18px;
   text-align: center;
@@ -83,15 +77,10 @@ p {
     font-size: 100px;
     font-family: "comic_andy","Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
-  .intro .intro-body .brand-heading2 {
-    font-size: 75px;
-    font-family: "comic_andy","Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
   .intro .intro-body .intro-text {
     font-size: 26px;
   }
 }
-
 .btn-default {
   border: 3px solid #FFF;
   color: #FFF;
@@ -177,6 +166,28 @@ p {
     font-size: 30;
 /*    font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
 */}
+
+.col-md-10.col-md-offset-1.title-div {
+  position: relative;
+  text-align: center;
+}
+
+.topic-title {
+  width: 100%;
+  color: black;
+  font-weight: bold;
+  position: relative;
+  background-color: white;
+  border: 3px solid #00c0ef;
+  border-radius: 15px;
+  text-align: center;
+  min-width: 400px;
+}
+
+.btn.btn-primary.next-button:active {
+  padding-right: 3px;
+  -webkit-transition: 0.1s;
+}
 .btn-main{
   border-radius: 10px 20px;
   background-color: Transparent;

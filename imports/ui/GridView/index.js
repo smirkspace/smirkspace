@@ -15,7 +15,7 @@ export default function GridView() {
         <div><Button source="images/life-at-uvic.jpg" spaceIsDeployed="true" buttonName="uvic" /></div>
         <div><Button source="images/workout.jpg" buttonName="fitness" /></div>
         <div><Button source="images/LGBT.jpg" buttonName="lgbt" /></div>
-        <div><Button source="images/Parenting.jpg" buttonName="parenting" /></div>
+        <div><Button source="images/Parenting.jpg" spaceIsDeployed="true" buttonName="parenting" /></div>
         <div><Button source="images/canadian-politics.jpg" spaceIsDeployed="true" buttonName="canadian-politics" /></div>
         <div><Button source="images/movies-and-television.jpg" spaceIsDeployed="true" buttonName="movies-and-television" /></div>
         <div><Button source="images/music-listening.jpg" buttonName="music-listening" /></div>

@@ -6,8 +6,10 @@ export default class Blurb extends React.Component{
 	render() {
 		return (
 	        <div>
-                <h4 > My name is {this.props.name} </h4>
-                <h4 > I'm joining the { this.props.room } room because of ... </h4>
+              <div className='modal-header'>
+                <div className='modal-title'> My name is {this.props.name} </div>
+              </div>
+                <div className='modal-body'> I'm joining the { this.props.room } room because of ... </div>
                  <form >
                   <textarea name="blurb" form="new-blurb" mask='Enter a blurb about yourself...' height="50" width="70"></textarea>
                 </form>

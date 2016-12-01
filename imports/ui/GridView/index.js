@@ -14,7 +14,6 @@ export default class GridView extends Component {
       	this.state = { 
       		isModalOpen: false,
       	}
-      // this._onButtonClick = this._onButtonClick.bind(this);
     }
 
   openModal() {
@@ -69,14 +68,11 @@ class Modal extends React.Component {
         return null
 
       let modalStyle = {
-        width: '100%',
-        height: '100%',
         position: 'absolute',
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
         zIndex: '99',
-        background: '#f7faff',
       }
 
       if (this.props.width && this.props.height) {
@@ -110,13 +106,10 @@ class Modal extends React.Component {
       }
 
       return (
-        <div className={this.props.containerClassName}>
-          <div className='intro' style={modalStyle}>
+        <div>
+          <div className='modal-content' style={modalStyle}>
             {this.props.children}
           </div>
-          {!this.props.noBackdrop &&
-              <div className={this.props.backdropClassName} style={backdropStyle}
-                   onClick={e => this.close(e)}/>}
         </div>
       );
     }
@@ -128,5 +121,4 @@ class Modal extends React.Component {
         this.props.onClose()
       }
     }
-
-}
+  }

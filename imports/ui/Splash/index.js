@@ -14,7 +14,7 @@ export default function Splash() {
               </div>
             </div>
             <div className="row">
-              <img src="images/space-ship-logo.png" alt="space-ship-logo" height="30%" width="30%" />
+              <img src="images/space-ship-logo.png" alt="space-ship-logo" height="25%" width="25%" />
             </div>
             <div className="row">
               <div className="col-md-2 col-md-offset-3">
@@ -27,7 +27,7 @@ export default function Splash() {
               <div className="col-md-2">
                 <a href="#user-story">
                   <button type="button" className="btn btn-main">
-                    <h2> User Story <span className="glyphicon glyphicon-user" aria-hidden="true" /></h2>
+                    <h2>User Story <span className="glyphicon glyphicon-user" aria-hidden="true" /></h2>
                   </button>
                 </a>
               </div>

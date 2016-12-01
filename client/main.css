@@ -108,11 +108,13 @@ p {
 
 .col-md-10.col-md-offset-1.title-div {
   position: relative;
+  margin-bottom: 1%;
 }
 
 .topic-title {
   width: 100%;
   color: black;
+  font-size: 25px;
   font-weight: bold;
   position: relative;
   background-color: white;
@@ -120,6 +122,10 @@ p {
   border-radius: 15px;
   text-align: center;
   min-width: 400px;
+}
+
+.empty-box {
+  height: 55px;
 }
 
 .btn.btn-primary.next-button:active {

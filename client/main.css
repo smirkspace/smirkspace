@@ -24,7 +24,10 @@ h2{
     font-family: 'Lobster', cursive;
 }
 h3,
-h4,
+.h4 h4{
+  font-size: 1.5rem;
+  font-color: black;
+},
 h5,
 h6 {
   margin: 0 0 35px;
@@ -89,18 +92,6 @@ p {
   }
 }
 
-/*.btn {
-  text-transform: uppercase;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  border-radius: 0;
-  font-size:14px;
-  border: solid #FFF 2px;
-  color: #FFF;
-}*/
 .btn-default {
   border: 3px solid #FFF;
   color: #FFF;
@@ -168,7 +159,7 @@ p {
   border-radius: 35px;
   border: 2px solid #FFEBCD;
 }
-.modal-container .modal, .modal-backdrop {
+.modal-container, .modal-backdrop {
   display: table-cell;
   vertical-align: middle;
 }
@@ -196,5 +187,9 @@ p {
   outline: none;
   color: #fff;
   border: none;
+}
+.modal-body modal-body .modal-title modal-title{
+  padding: 0px;
+  color: #000000;
 }
 

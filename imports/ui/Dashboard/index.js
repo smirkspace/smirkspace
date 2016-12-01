@@ -24,7 +24,7 @@ export default function Dashboard() {
       </header>
       <div className='row'>
           <div className="col-md-10 col-md-offset-1"> <GridView /> </div>
-          <div> <Blurb room='travel' name='Some name' /> </div>
+      <div className='row'> <Blurb room='travel' name='Some name' /> </div>
 
       </div>
     </div>

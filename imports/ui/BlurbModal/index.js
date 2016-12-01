@@ -16,23 +16,13 @@ export default class Blurb extends React.Component{
 		return (
 	        <div>
             <button onClick={() => this.openModal()}>Open modal</button>
-
   	          <Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
-
-                <div className="modal">
-                  <div class="modal fade">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                          <div className="modal-title"> My name is {this.props.name} </div>
-                          <div className="modal-body modal-text"> I'm joining the { this.props.room } room because of ... </div>
-          	               <form className='modal-body' >
-                            <textarea name="blurb" form="new-blurb" mask='Enter a blurb about yourself...' height="50" width="70"></textarea>
-                          </form>
-          	             <h6> <button onClick={() => this.closeModal()}>Close</button> </h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <h4 > My name is {this.props.name} </h4>
+                <h4 > I'm joining the { this.props.room } room because of ... </h4>
+                 <form >
+                  <textarea name="blurb" form="new-blurb" mask='Enter a blurb about yourself...' height="50" width="70"></textarea>
+                </form>
+	             <h6> <button onClick={() => this.closeModal()}>Close</button> </h6>
   	          </Modal>
 	        </div>
 	    );
@@ -53,7 +43,8 @@ Blurb.propTypes = {
   username: PropTypes.string,
   clicked: PropTypes.boolean,
 };
-
+// style={backdropStyle}
+// style={backdropStyle}
 class Modal extends React.Component {
 
 	render() {
@@ -65,7 +56,7 @@ class Modal extends React.Component {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        zIndex: '9999',
+        zIndex: '99',
         background: '#f7faff',
       }
 
@@ -89,7 +80,7 @@ class Modal extends React.Component {
         height: '100%',
         top: '0px',
         left: '0px',
-        zIndex: '9998',
+        zIndex: '98',
         background: '#98a4b7',
       }
 

@@ -12,7 +12,10 @@ export default class GridView extends Component {
     		<div>
 	    		<table>
 	    			<tr>
-	    				<td><div className="travel_button"> <Button source="images/new_travel.jpg" spaceIsDeployed="true" buttonName="travel" /></div> </td>
+	    				<td><div className="travel_button"> <Button source="images/new_travel.jpg" spaceIsDeployed="true" buttonName="travel"/>
+	    				<Blurb room='travel' name='Some name' /> 
+
+	    				</div> </td>
 						<td><div className="parenting_button"> <Button source="images/Parenting.jpg" buttonName="parenting" /></div> </td>
 						<td><div className="insomnia_button"> <Button source="images/insomnia.png" buttonName="insomnia" /></div> </td>
 	 				</tr>

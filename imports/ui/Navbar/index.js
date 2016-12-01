@@ -19,7 +19,7 @@ export default function Navbar() {
         </div>
         <div className="collapse navbar-collapse lead" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav navbar-right">
-            <li><button type="button" className="btn navbar-btn"> <AccountsUIWrapper /> </button> </li>
+            <li> <div className="divButton"> <AccountsUIWrapper /> </div> </li>
           </ul>
         </div>
       </div>

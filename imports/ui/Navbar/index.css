@@ -5,3 +5,14 @@
   margin-top: -60px;
   text-align: right;
 }
+.divButton{
+  height: 90%;
+  width: auto;
+  margin-top: 1.8em;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top:  .5vh;
+  padding-bottom: .5vh;
+  background-color: #FFF;
+  border-radius: 8px;
+}

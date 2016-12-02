@@ -15,7 +15,7 @@ export default class Blurb extends React.Component{
                   <div className='modal-text' id="modal-text"> Before you join this room...</div>
                   <div className='modal-text' id="modal-text" > Please enter a blurb about yourself below </div>
                 <form >
-                  <textarea name="blurb" form="new-blurb" mask='Enter a blurb about yourself...'> </textarea>
+                  <textarea rows="4" cols="40"></textarea>
                 </form>
               </div>
 

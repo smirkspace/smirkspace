@@ -1,18 +1,25 @@
 import React, { Component, PropTypes } from 'react';
 import { } from 'meteor/meteor';
-
+//<button type='button' className='btn btn-secondary' onClick={() => this.closeModal()}>Close</button>
 
 export default class Blurb extends React.Component{
 	render() {
 		return (
 	        <div>
               <div className='modal-header'>
-                <div className='modal-title'> My name is {this.props.name} </div>
+                <div className='modal-title'> 
+                  <div className="modal-text"> My name is {this.props.name} </div>
+                </div>
               </div>
-                <div className='modal-body'> I'm joining the { this.props.room } room because of ... </div>
-                 <form >
-                  <textarea name="blurb" form="new-blurb" mask='Enter a blurb about yourself...' height="50" width="70"></textarea>
+              <div className='modal-body'>  
+                  <div className='modal-text'> I'm joining the { this.props.room } room because of ... </div>
+                  <div className='modal-text'> Enter a blurb about yourself </div>
+
+                <form >
+                  <textarea name="blurb" form="new-blurb" mask='Enter a blurb about yourself...'> </textarea>
                 </form>
+              </div>
+
 	        </div>
 	    );
 	}
@@ -20,7 +27,6 @@ export default class Blurb extends React.Component{
 
 Blurb.propTypes = {
   name: PropTypes.string,
-  blurb: PropTypes.string,
   room: PropTypes.string,
   username: PropTypes.string,
 };

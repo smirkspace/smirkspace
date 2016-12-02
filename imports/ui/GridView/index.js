@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { } from 'react-router';
+import { Link } from 'react-router';
 
 import Button from '../SpaceButton';
 import Blurb from '../BlurbModal';
@@ -24,6 +25,7 @@ export default class GridView extends Component {
       this.setState({ isModalOpen: false })
   }
 
+
   onButtonClick() {
     this.setState({
       isModalOpen: true,
@@ -37,9 +39,9 @@ export default class GridView extends Component {
 	    			<tbody>
 		    			<tr>
 		    				<td><div className="travel_button"> <Button source="images/new_travel.jpg" spaceIsDeployed="true" buttonName="travel" handleClick={() => this.onButtonClick()}/>
-		    						<Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal()} >
-		    							<Blurb />
-		    							<h6> <button onClick={() => this.closeModal()}>Close</button> </h6>
+		    						<Modal buttonName="travel" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()} >
+		    							<Blurb name="username" room="Travel" />
+
 		    						</Modal>
 		    					</div>
 		    				 </td>
@@ -61,6 +63,7 @@ export default class GridView extends Component {
 }
 
 
+
 class Modal extends React.Component {
 
 	render() {
@@ -71,22 +74,8 @@ class Modal extends React.Component {
         position: 'absolute',
         top: '50%',
         left: '50%',
-        transform: 'translate(-50%, -50%)',
+        transform: 'translate(-50%, -80%)',
         zIndex: '99',
-      }
-
-      if (this.props.width && this.props.height) {
-        modalStyle.width = this.props.width + 'px'
-        modalStyle.height = this.props.height + 'px'
-        modalStyle.marginLeft = '-' + (this.props.width/2) + 'px',
-        modalStyle.marginTop = '-' + (this.props.height/2) + 'px',
-        modalStyle.transform = null
-      }
-
-      if (this.props.style) {
-        for (let key in this.props.style) {
-          modalStyle[key] = this.props.style[key]
-        }
       }
 
       let backdropStyle = {
@@ -106,9 +95,10 @@ class Modal extends React.Component {
       }
 
       return (
-        <div>
+        <div className="container-fluid">
           <div className='modal-content' style={modalStyle}>
             {this.props.children}
+			<Link to={'/space/' + this.props.buttonName} > <button type='button' className='btn btn-secondary'>Join Room</button> </Link>
           </div>
         </div>
       );
@@ -122,3 +112,4 @@ class Modal extends React.Component {
       }
     }
   }
+

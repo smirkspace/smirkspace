@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import './index.css';
 import { countHandler, Counters } from '../../api/CountersDbCollection';
 import Blurb from '../BlurbModal';
+//<Link to={'/space/' + props.buttonName}>
 
 export default function Button(props) {
   // Function to give alerts for buttons not yet made
@@ -21,9 +22,7 @@ export default function Button(props) {
 
   const buttonType = props.spaceIsDeployed
   ? (
-    // <Link to={'/space/' + props.buttonName}>
       <input type="image" className="spaceButton" src={props.source} onClick={props.handleClick}/>
-    // </Link>
     )
   : <input type="image" className="spaceButton" src={props.source} onClick={spaceNotAvailable} />
 

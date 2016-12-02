@@ -44,6 +44,9 @@ export function spaceGen() {
       };
       msg._id = SimpleChat.Chats.insert(msg);
       SimpleChat.options.onNewMessage(msg);
+
+      const waiting = SimpleChat.Chats.find({ message: '...Waiting for another user...', roomId: convo[i].Id.toString() }).fetch();
+      SimpleChat.Chats.remove({ _id: waiting[0]._id });
       return convo[i].Id;
     }
   }
@@ -81,6 +84,22 @@ export function spaceGen() {
   };
   msg2._id = SimpleChat.Chats.insert(msg2);
   SimpleChat.options.onNewMessage(msg2);
+
+  const waitingMsg = {
+    message: '...Waiting for another user...',
+    roomId: instance.toString(),
+    username: Meteor.user().username,
+    name: Meteor.user().username,
+    sent: !this.isSimulation,
+    receivedBy: [],
+    receivedAll: false,
+    viewedBy: [],
+    viewedAll: false,
+    userId: Meteor.user()._id,
+    date: new Date(),
+  };
+  waitingMsg._id = SimpleChat.Chats.insert(waitingMsg);
+  SimpleChat.options.onNewMessage(waitingMsg);
 
   return instance;
 }

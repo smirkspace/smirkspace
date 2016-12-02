@@ -70,7 +70,7 @@ export default function SpaceFrame() {
     <div className="container">
       <div className="row">
         <div className="col-md-10 col-md-offset-1 title-div">
-          <div className="topic-title">You are now talking about {topic()}<span className="glyphicon glyphicon-thumbs-up" /></div>
+          <div className="topic-title">You are now talking about {topic()}             <span className="glyphicon glyphicon-thumbs-up" /></div>
         </div>
       </div>
       <div className="row">

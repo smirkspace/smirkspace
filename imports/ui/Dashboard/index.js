@@ -3,6 +3,9 @@ import { Meteor } from 'meteor/meteor';
 import { } from 'react-router';
 import GridView from '../GridView';
 
+import Blurb from '../BlurbModal';
+
+
 export default function Dashboard() {
   return (
     <div>
@@ -20,6 +23,7 @@ export default function Dashboard() {
         </div>
       </header>
       <GridView />
+
     </div>
   );
 }

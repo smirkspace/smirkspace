@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Slider from 'react-slick';
 import Button from '../SpaceButton';
 
+
 const NextArrow = React.createClass({
   render() {
     return (
@@ -46,7 +47,7 @@ export default class Carousel extends Component {
     };
 
     return (
-      <div className="row align-center">
+      <div>
         <Slider {...settings}>
           <div>
             <br />
@@ -83,7 +84,7 @@ export default class Carousel extends Component {
             <br />
             <h3>
               <div className="lgbt_button">
-                <Button source="images/LGBT.jpg" buttonName="lgbt" />
+                <Button source="images/LGBT.jpg" buttonName="lgbt"/>
               </div>
             </h3>
           </div>

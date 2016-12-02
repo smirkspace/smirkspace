@@ -1,11 +1,16 @@
 import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
 import './index.css';
 import { countHandler } from '../../api/CountersDbCollection';
+// <Link to={'/space/' + props.buttonName}>
 
 export default function Button(props) {
   // Function to give alerts for buttons not yet made
   // And to incrememnt counters for fake doors
+
+  function openModal() {
+    props.handleClick();
+  }
+
   function spaceNotAvailable() {
     // call function within the CountersDbCollection file
     // will create a DB object if button is being clicked for the first time
@@ -18,9 +23,7 @@ export default function Button(props) {
 
   const buttonType = props.spaceIsDeployed
   ? (
-    <Link to={`/space/${props.buttonName}`}>
-      <input type="image" className="spaceButton" src={props.source} />
-    </Link>
+    <input type="image" className="spaceButton" src={props.source} onClick={openModal} />
     )
   : <input type="image" className="spaceButton" src={props.source} onClick={spaceNotAvailable} />;
 
@@ -31,4 +34,5 @@ Button.propTypes = {
   spaceIsDeployed: PropTypes.string,
   buttonName: PropTypes.string.isRequired,
   source: PropTypes.string.isRequired,
+  handleClick: PropTypes.func,
 };

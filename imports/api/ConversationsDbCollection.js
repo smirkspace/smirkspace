@@ -9,9 +9,9 @@ if (Meteor.isServer) {
 }
 
 export function spaceGen() {
-
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
   Meteor.subscribe('conversations');
+  Meteor.subscribe('simpleChats');
   const url = window.location.href;
   let index = url.length - 1;
   let char = url[index];
@@ -29,6 +29,24 @@ export function spaceGen() {
     if (convo[i].NumberInRoom === 1 && convo[i].Available === true && convo[i].Category === path) {
       Conversations.update({ _id: convo[i]._id },
         { $set: { NumberInRoom: 2, Available: false, user2: Meteor.user().username } });
+      const msg = {
+        message: `Hi, I'm ${Meteor.user().username}!`,
+        roomId: convo[i].Id.toString(),
+        username: Meteor.user().username,
+        name: Meteor.user().username,
+        sent: !this.isSimulation,
+        receivedBy: [],
+        receivedAll: false,
+        viewedBy: [],
+        viewedAll: false,
+        userId: Meteor.user()._id,
+        date: new Date(),
+      };
+      msg._id = SimpleChat.Chats.insert(msg);
+      SimpleChat.options.onNewMessage(msg);
+
+      const waiting = SimpleChat.Chats.find({ message: '...Waiting for another user...', roomId: convo[i].Id.toString() }).fetch();
+      SimpleChat.Chats.remove({ _id: waiting[0]._id });
       return convo[i].Id;
     }
   }
@@ -50,6 +68,38 @@ export function spaceGen() {
     Available: true,
     user1: Meteor.user().username,
   });
+
+  const msg2 = {
+    message: `Hi, I'm ${Meteor.user().username}!`,
+    roomId: instance.toString(),
+    username: Meteor.user().username,
+    name: Meteor.user().username,
+    sent: !this.isSimulation,
+    receivedBy: [],
+    receivedAll: false,
+    viewedBy: [],
+    viewedAll: false,
+    userId: Meteor.user()._id,
+    date: new Date(),
+  };
+  msg2._id = SimpleChat.Chats.insert(msg2);
+  SimpleChat.options.onNewMessage(msg2);
+
+  const waitingMsg = {
+    message: '...Waiting for another user...',
+    roomId: instance.toString(),
+    username: Meteor.user().username,
+    name: Meteor.user().username,
+    sent: !this.isSimulation,
+    receivedBy: [],
+    receivedAll: false,
+    viewedBy: [],
+    viewedAll: false,
+    userId: Meteor.user()._id,
+    date: new Date(),
+  };
+  waitingMsg._id = SimpleChat.Chats.insert(waitingMsg);
+  SimpleChat.options.onNewMessage(waitingMsg);
 
   return instance;
 }

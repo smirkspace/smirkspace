@@ -86,19 +86,12 @@ export default class GridView extends Component {
 	  return (
 	    <div>
 	      <div className="buttonGrid">
-	        <div><Button source="images/random-chat.jpg" spaceIsDeployed="true" buttonName="random" handleClick={() => this.onButtonClick()}/>
-	        	<Modal buttonName="random" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()} >
-			    	<Blurb name= {Meteor.user().username} room="Random" />
-			    </Modal>
-			</div>
+			     <Modal buttonName="random" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()} >
+					   <Blurb name= {Meteor.user().username} />
+				</Modal>
+	        <div><Button source="images/random-chat.jpg" spaceIsDeployed="true" buttonName="random" handleClick={() => this.onButtonClick()}/></div>
 
-
-
-	        <div><Button source="images/new_travel.jpg" spaceIsDeployed="true" buttonName="travel" handleClick={() => this.onButtonClick()}/>
-	        	<Modal buttonName="travel" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()} >
-			    	<Blurb name= {Meteor.user().username} room="Travel" />
-			    </Modal>
-			</div>
+	        <div><Button source="images/new_travel.jpg" spaceIsDeployed="true" buttonName="travel" handleClick={() => this.onButtonClick()}/></div>
 
 	        <div><Button source="images/donald-trump.jpg" spaceIsDeployed="true" buttonName="donald-trump" /></div>
 	        <div><Button source="images/someone-to-talk-to.jpg" spaceIsDeployed="true" buttonName="someone-to-talk-to" /></div>

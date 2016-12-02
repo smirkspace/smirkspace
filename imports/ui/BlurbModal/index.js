@@ -12,9 +12,8 @@ export default class Blurb extends React.Component{
                 </div>
               </div>
               <div className='modal-body'>  
-                  <div className='modal-text'> I'm joining the { this.props.room } room because of ... </div>
+                  <div className='modal-text'> I'm joining this room because of ... </div>
                   <div className='modal-text'> Enter a blurb about yourself </div>
-
                 <form >
                   <textarea name="blurb" form="new-blurb" mask='Enter a blurb about yourself...'> </textarea>
                 </form>
@@ -27,7 +26,7 @@ export default class Blurb extends React.Component{
 
 Blurb.propTypes = {
   name: PropTypes.string,
-  room: PropTypes.string,
+  buttonName: PropTypes.string,
   username: PropTypes.string,
 };
 

@@ -1,12 +1,25 @@
 import { Mongo } from 'meteor/mongo';
 import { } from 'meteor/meteor';
 
+export const UserBlurbs = new Mongo.Collection('userblurbs');
+
+ export function updateUserBlurb(myBlurb){
+
+    UserBlurbs.update({_id: Meteor.userId()}, {$set: {'blurb': myBlurb }});
+  }
+
 export const Conversations = new Mongo.Collection('conversations');
 
 if (Meteor.isServer) {
   // This code only runs on the server
   Meteor.publish('conversations', () => Conversations.find());
 }
+
+Meteor.users.allow({
+    'update': function(userId, doc, fields, modifier) {
+        return userId === doc.userId;
+    }
+});
 
 export function spaceGen() {
 

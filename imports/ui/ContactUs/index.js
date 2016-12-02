@@ -2,6 +2,10 @@ import React from 'react';
 import './index.css';
 
 export default function ContactUs() {
+  function toTop(){
+    window.scrollTo(0, 0);
+  }
+  toTop();
   return (
     <div>
       <h4 id="header">Contact us:</h4>

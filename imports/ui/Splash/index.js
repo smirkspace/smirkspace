@@ -1,5 +1,6 @@
 import React from 'react';
 import Guide from '../Guide';
+import './index.css';
 
 export default function Splash() {
   return (
@@ -27,7 +28,7 @@ export default function Splash() {
               <div className="col-md-2">
                 <a href="#user-story">
                   <button type="button" className="btn btn-main">
-                    <h2>User Story <span className="glyphicon glyphicon-user" aria-hidden="true" /></h2>
+                    <h2 className="space">User Story <span className="glyphicon glyphicon-user" aria-hidden="true" /></h2>
                   </button>
                 </a>
               </div>

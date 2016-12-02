@@ -1,4 +1,5 @@
 import React from 'react';
+import { Meteor } from 'meteor/meteor';
 import { } from 'react-router';
 import GridView from '../GridView';
 

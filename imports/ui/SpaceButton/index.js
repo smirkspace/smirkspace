@@ -9,6 +9,11 @@ export default function Button(props) {
   // Function to give alerts for buttons not yet made
   // And to incrememnt counters for fake doors
 
+  function openModal(){
+    props.handleClick();
+
+  }
+
   function spaceNotAvailable() {
     
     //call function within the CountersDbCollection file
@@ -22,7 +27,7 @@ export default function Button(props) {
 
   const buttonType = props.spaceIsDeployed
   ? (
-      <input type="image" className="spaceButton" src={props.source} onClick={props.handleClick}/>
+      <input type="image" className="spaceButton" src={props.source} onClick={openModal}/>
     )
   : <input type="image" className="spaceButton" src={props.source} onClick={spaceNotAvailable} />
 

@@ -20,10 +20,13 @@ class AppFrame extends Component {
 
   render() {
     return (
-      <div className="container-fluid no-padding">
-        <Navbar />
-        <div className="content">
-          {this.props.children}
+      <div className="no-padding container-fluid">
+        <div className="wrapper">
+          <Navbar />
+          <div className="content">
+            {this.props.children}
+          </div>
+          <div className="push" />
         </div>
         <Footer />
       </div>

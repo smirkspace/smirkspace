@@ -41,7 +41,7 @@ export default function Guide() {
           <tr>
             <td className="flex-container column-container" id="bottom-splash">
               <div className="title dark-text">Fun. Easy. Free.</div>
-              <div className="offset dark-text">Sign up today and start connecting.&nbsp;<button className="go_top"><a href="#" className="scrollup">Sign up</a></button>
+              <div className="offset dark-text">Sign up today and start connecting.&nbsp;<button className="go_top"><a href="#top" className="scrollup">Sign up</a></button>
               </div>
             </td>
           </tr>
@@ -50,7 +50,7 @@ export default function Guide() {
     </div>
   );
 }
-$(document).ready(function () {
+$(document).ready(() => {
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       $('.scrollup').fadeIn();
@@ -59,7 +59,7 @@ $(document).ready(function () {
     }
   });
 
-  $('.scrollup').click(function () {
+  $('.scrollup').click(() => {
     $('html, body').animate({
       scrollTop: 0,
     }, 600);

@@ -1,15 +1,68 @@
-tr td{
-  padding: 20px;
-  color: #ffffff;
-  text-align: center;
-  font-family: "verdana";
-  font-style: oblique;
-  font-size: 20px;
+.buttonGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 74%;
+  margin: auto;
 }
-table {
-/*  margin-left: 50%;
-  margin-right: 50%;*/
+.buttonGrid div {
+  padding: 20px;
+}
 
-  text-align: center;
-  border-collapse:collapse;
+.modal_element {
+    /* set border styling */
+    border-color: black;
+    border-style: solid;
+    border-width: 10px;
+
+    /* set border roundness */
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+
+.modal-text{
+    font-family: Arial,sans-serif;
+    size: 24
+    line-height: 1.5;
+    color: #373a3c;
+    text-align: left;
+}
+.modal-header{
+  display: block;
+  padding: 15px;
+  border-radius: .3rem;
+}
+.modal-title{
+  display: block;
+  margin-bottom: .5rem;
+  font-size: 24;
+  box-sizing: inherit;
+  line-height: 1.5;
+  color: #373a3c;
+  font-weight: 500;
+/*  border-bottom: .3px solid rgba(0,0,0,.2);*/
+  padding: 0px;
+  color: #000000;
+}
+.modal-content {
+    width: 40%;
+    height: auto;
+    background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+.modal-body {
+  display: block;
+  margin-bottom: .5rem;
+  font-size: 20;
+  box-sizing: inherit;
+  line-height: 1.5;
+  color: #373a3c;
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
 }

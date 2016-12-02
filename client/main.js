@@ -20,12 +20,15 @@ function requireAuth(nextState, replace) {
       pathname: '/splash',
       state: { nextPathname: nextState.location.pathname },
     });
+  }
+  /*
   } else if (!Meteor.user().emails[0].verified) {
     replace({
       pathname: '/verifyEmail',
       state: { nextPathname: nextState.location.pathname },
     });
   }
+  */
 }
 
 Meteor.startup(() => {
@@ -97,7 +100,7 @@ Meteor.startup(() => {
         <Route path="*" component={Splash} />
       </Route>
     </Router>,
-    document.getElementById('render-target')
+    document.getElementById('render-target'),
   );
 });
 

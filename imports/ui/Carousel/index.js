@@ -1,13 +1,15 @@
+import React, { Component } from 'react';
 import Slider from 'react-slick';
 import Button from '../SpaceButton';
-import React, { Component } from 'react';
 
 
 const NextArrow = React.createClass({
   render() {
-    return (<div {...this.props}>
-      <button type="button" className="col-sm-offset-6"><i className="glyphicon glyphicon-arrow-right" aria-hidden="true" /></button>
-    		</div>);
+    return (
+      <div {...this.props}>
+        <button type="button" className="col-sm-offset-6"><i className="glyphicon glyphicon-arrow-right" aria-hidden="true" /></button>
+      </div>
+    );
   },
 });
 

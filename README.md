@@ -24,7 +24,7 @@ Bridget Rassell [bridget.rassell@gmail.com]
 
 ## Live Demo Link/Video Link ##
 
-[Live Demo] (www.smirkspace.com)
+[Live Demo] (http://www.smirkspace.com)
 
 [Video Demo 1] (https://www.youtube.com/watch?v=Iomo-CPjb2g)
 

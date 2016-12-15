@@ -48,6 +48,45 @@ Meteor.startup(() => {
       // Find all the rooms that have the current logged
       // on user and decrement the number of people in the room
       for (let k = 0; k < users.length; k++) {
+        // Display disconnect message
+        if (users[k].user1 === Meteor.user().username) {
+          const disconnectUser1Msg = {
+            message: `${users[k].user1} has left the chat. Click Next to talk to someone new!`,
+            roomId: users[k].Id.toString(),
+            username: 'Smirkspace',
+            name: 'Smirkspace',
+            sent: !this.isSimulation,
+            receivedBy: [],
+            receivedAll: false,
+            viewedBy: [],
+            viewedAll: false,
+            userId: 1,
+            date: new Date(),
+          };
+          disconnectUser1Msg._id = SimpleChat.Chats.insert(disconnectUser1Msg);
+          SimpleChat.options.onNewMessage(disconnectUser1Msg);
+
+          Conversations.update({ _id: users[k]._id }, { $unset: { user1: '' } });
+        } else {
+          const disconnectUser2Msg = {
+            message: `${users[k].user2} has left the chat. Click Next to talk to someone new!`,
+            roomId: users[k].Id.toString(),
+            username: 'Smirkspace',
+            name: 'Smirkspace',
+            sent: !this.isSimulation,
+            receivedBy: [],
+            receivedAll: false,
+            viewedBy: [],
+            viewedAll: false,
+            userId: 1,
+            date: new Date(),
+          };
+          disconnectUser2Msg._id = SimpleChat.Chats.insert(disconnectUser2Msg);
+          SimpleChat.options.onNewMessage(disconnectUser2Msg);
+
+          Conversations.update({ _id: users[k]._id }, { $unset: { user2: '' } });
+        }
+
         if (chatId.length === 0) {
           const num = users[k].NumberInRoom;
           const newNum = num - 1;
@@ -62,12 +101,18 @@ Meteor.startup(() => {
         } else {
           for (let p = 0; p < chatId.length; p++) {
             if (users[k].user1 === chatId[p].username || users[k].user2 === chatId[p].username) {
+              const userToRemove = SimpleChat.Chats.find({
+                roomId: users[k].Id.toString() }).fetch();
+
               const num = users[k].NumberInRoom;
               const newNum = num - 1;
+
               // If the room is now empty,
               // delete the room in both the 'conversations' and 'simpleChats' collections
               if (newNum === 0) {
-                SimpleChat.Chats.remove({ _id: chatId[p]._id });
+                for (let i = 0; i < userToRemove.length; i++) {
+                  SimpleChat.Chats.remove({ _id: userToRemove[i]._id });
+                }
                 Conversations.remove({ _id: users[k]._id });
               // If the room is not empty, just update the number of people in the room
               } else {

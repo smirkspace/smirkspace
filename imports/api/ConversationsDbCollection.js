@@ -88,14 +88,14 @@ export function spaceGen() {
   const waitingMsg = {
     message: '...Waiting for another user...',
     roomId: instance.toString(),
-    username: Meteor.user().username,
-    name: Meteor.user().username,
+    username: 'Smirkspace',
+    name: 'Smirkspace',
     sent: !this.isSimulation,
     receivedBy: [],
     receivedAll: false,
     viewedBy: [],
     viewedAll: false,
-    userId: Meteor.user()._id,
+    userId: 1,
     date: new Date(),
   };
   waitingMsg._id = SimpleChat.Chats.insert(waitingMsg);

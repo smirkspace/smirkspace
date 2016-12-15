@@ -3,10 +3,37 @@ import { } from 'meteor/meteor';
 
 export const UserBlurbs = new Mongo.Collection('userblurbs');
 
- export function updateUserBlurb(myBlurb){
 
-    UserBlurbs.update({_id: Meteor.userId()}, {$set: {'blurb': myBlurb }});
+
+export function updateUserBlurb(myBlurb){
+  const currentUserName = UserBlurbs.find({username: Meteor.user().username}).fetch();
+
+  if(currentUserName[0] === undefined){
+    console.log('user is undefined');
+
+    UserBlurbs.insert({
+      blurb: myBlurb,
+      username: Meteor.user().username
+
+    });
   }
+
+
+
+  else{
+
+    UserBlurbs.update({_id: currentUserName[0]._id} , {
+      $set: {
+        blurb: myBlurb
+      }
+    });
+
+
+  }
+
+
+
+}
 
 export const Conversations = new Mongo.Collection('conversations');
 
@@ -16,8 +43,9 @@ if (Meteor.isServer) {
 }
 
 Meteor.users.allow({
-    'update': function(userId, doc, fields, modifier) {
+    'update': function(userId, doc, fields, modifier, profile) {
         return userId === doc.userId;
+
     }
 });
 

@@ -9,7 +9,7 @@ export default class Blurb extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      blurb: 'Enter stuff here',
+      blurb: 'Enter your blurb here',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -17,13 +17,13 @@ export default class Blurb extends React.Component{
   }
 
   handleChange(event) {
-    this.setState({blurb: event.target.blurb});
-    updateUserBlurb(event.target.blurb);
+    this.setState({blurb: event.target.value});
+    updateUserBlurb(this.state.blurb);
   }
 
   handleSubmit(event) {
-    alert('An essay was submitted: ' + this.state.blurb);
     event.preventDefault();
+
   }
 
 	render() {
@@ -39,7 +39,9 @@ export default class Blurb extends React.Component{
                   <div className='modal-text' id="modal-text" > Please enter a blurb about yourself below </div>
                 <form >
                   <textarea type='text' value={this.state.blurb} onChange={this.handleChange} />
+
                 </form>
+
               </div>
 
 	        </div>

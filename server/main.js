@@ -3,6 +3,11 @@ import { Accounts } from 'meteor/accounts-base';
 import '../imports/api/ConversationsDbCollection';
 import '../imports/api/CountersDbCollection';
 
+import { UserBlurbs } from '../imports/api/ConversationsDbCollection';
+
+
+
+
 SimpleChat.configure({
   texts: {
     loadMore: 'Load More',
@@ -58,7 +63,16 @@ Accounts.config({
   sendVerificationEmail: false,
 });
 
+Meteor.publish('users', function() {
+    return Meteor.users.find({}, {fields: {accountType: 1}});
+});
+
+
+
 Meteor.startup(() => {
+
+  // Meteor.users.update({_id: Meteor.userId()}, {$set : {"profile.blurb": "Some Blurb"} });
+
   // code to run on server at startup
   process.env.MAIL_URL = 'smtp://postmaster%40smirkspace.com:d8653b6e85794a852ac1ac62b6eec159@smtp.mailgun.org:587';
 

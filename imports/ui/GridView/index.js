@@ -42,25 +42,13 @@ export class Modal extends React.Component {
         backdropStyle[key] = this.props.backdropStyle[key];
       }
     }
-
-<<<<<<< HEAD
       return (
         <div className="container-fluid">
           <div className='modal-content' style={modalStyle}>
             {this.props.children}
 	          <div className="modal-footer">
-				<Link to={'/space/' + this.props.clickedButton} > <input type='submit' className='btn btn-secondary'value="Join Room" /> </Link>
-				<button type="button" className="btn btn-primary" onClick={e => this.close(e)}> Close </button>
-			  </div>
-=======
-    return (
-      <div className="container-fluid">
-        <div className="modal-content" style={modalStyle}>
-          {this.props.children}
-          <div className="modal-footer">
-            <Link to={`/space/${this.props.clickedButton}`} > <button type="button" className="btn btn-secondary">Join Room</button> </Link>
-            <button type="button" className="btn btn-primary" onClick={e => this.close(e)}> Close </button>
->>>>>>> b5f7e2771f842e3b90a7252bcfb537695e26c44a
+				      <Link to={'/space/' + this.props.clickedButton} > <input type='submit' className='btn btn-secondary'value="Join Room" /> </Link>
+				      <button type="button" className="btn btn-primary" onClick={e => this.close(e)}> Close </button>
           </div>
         </div>
       </div>

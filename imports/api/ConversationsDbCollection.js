@@ -17,9 +17,6 @@ export function updateUserBlurb(myBlurb){
 
     });
   }
-
-
-
   else{
 
     UserBlurbs.update({_id: currentUserName[0]._id} , {
@@ -65,13 +62,14 @@ export function spaceGen() {
   }
   // Assign the db items to a variable
   const convo = Conversations.find().fetch();
+  const blurb = UserBlurbs.find({username: Meteor.user().username}).fetch();
 
   for (let i = 0; i < convo.length; i++) {
     if (convo[i].NumberInRoom === 1 && convo[i].Available === true && convo[i].Category === path) {
       Conversations.update({ _id: convo[i]._id },
         { $set: { NumberInRoom: 2, Available: false, user2: Meteor.user().username } });
       const msg = {
-        message: `Hi, I'm ${Meteor.user().username}!`,
+        message: `Hi, I'm ${Meteor.user().username}!` + '\n' + blurb[0].blurb,
         roomId: convo[i].Id.toString(),
         username: Meteor.user().username,
         name: Meteor.user().username,
@@ -111,7 +109,7 @@ export function spaceGen() {
   });
 
   const msg2 = {
-    message: `Hi, I'm ${Meteor.user().username}!`,
+    message: `Hi, I'm ${Meteor.user().username}! ` + '\n' + blurb[0].blurb,
     roomId: instance.toString(),
     username: Meteor.user().username,
     name: Meteor.user().username,

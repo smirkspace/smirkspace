@@ -24,5 +24,28 @@ a.link1:hover {
 a.link1 {
   font-size:20px;
   text-decoration: none;
+  background-color: #00A;
   color: #ffffff;
+}
+a.divButton{
+  height: 90%;
+  width: auto;
+  margin-top: 1.8em;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top:  .5vh;
+  padding-bottom: .5vh;
+  background-color: #FFF;
+  border-radius: 8px;
+}
+a.divButton2{
+  height: 90%;
+  width: auto;
+  margin-top: 1.8em;
+  padding-left: .8vw;
+  padding-right: .8vw;
+  padding-top:  .5vh;
+  padding-bottom: .5vh;
+  background-color: #FFF;
+  border-radius: 8px;
 }

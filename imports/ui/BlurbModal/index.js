@@ -59,7 +59,5 @@ export default class Blurb extends React.Component{
 }
 
 Blurb.propTypes = {
-  buttonName: PropTypes.string,
-  username: PropTypes.string,
+  name: PropTypes.string,
 };
-

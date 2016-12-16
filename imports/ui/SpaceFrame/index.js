@@ -27,6 +27,44 @@ export default function SpaceFrame() {
       if (rooms[i].Id === space) {
         const num = rooms[i].NumberInRoom;
         const newNum = num - 1;
+        // Display disconnect message
+        if (rooms[i].user1 === Meteor.user().username) {
+          const disconnectUser1Msg = {
+            message: `${rooms[i].user1} has left the chat. Click Next to talk to someone new!`,
+            roomId: space.toString(),
+            username: 'Smirkspace',
+            name: 'Smirkspace',
+            sent: !this.isSimulation,
+            receivedBy: [],
+            receivedAll: false,
+            viewedBy: [],
+            viewedAll: false,
+            userId: 1,
+            date: new Date(),
+          };
+          disconnectUser1Msg._id = SimpleChat.Chats.insert(disconnectUser1Msg);
+          SimpleChat.options.onNewMessage(disconnectUser1Msg);
+
+          Conversations.update({ _id: rooms[i]._id }, { $unset: { user1: '' } });
+        } else {
+          const disconnectUser2Msg = {
+            message: `${rooms[i].user2} has left the chat. Click Next to talk to someone new!`,
+            roomId: space.toString(),
+            username: 'Smirkspace',
+            name: 'Smirkspace',
+            sent: !this.isSimulation,
+            receivedBy: [],
+            receivedAll: false,
+            viewedBy: [],
+            viewedAll: false,
+            userId: 1,
+            date: new Date(),
+          };
+          disconnectUser2Msg._id = SimpleChat.Chats.insert(disconnectUser2Msg);
+          SimpleChat.options.onNewMessage(disconnectUser2Msg);
+
+          Conversations.update({ _id: rooms[i]._id }, { $unset: { user2: '' } });
+        }
         // If the new number in the room is 0,
         // then delete that room from both the 'conversations' Collection
         // and the 'simpleChats' collection
@@ -70,7 +108,7 @@ export default function SpaceFrame() {
     <div className="container">
       <div className="row">
         <div className="col-md-10 col-md-offset-1 title-div">
-          <div className="topic-title">You are now talking about {topic()}<span className="glyphicon glyphicon-thumbs-up" /></div>
+          <div className="topic-title">You are now talking about {topic()}                                                                                                       <span className="glyphicon glyphicon-thumbs-up" /></div>
         </div>
       </div>
       <div className="row">

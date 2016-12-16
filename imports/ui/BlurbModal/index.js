@@ -1,15 +1,23 @@
 import React, { Component, PropTypes } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { } from 'meteor/meteor';
-import { updateUserBlurb } from '../../api/ConversationsDbCollection';
-//<button type='button' className='btn btn-secondary' onClick={() => this.closeModal()}>Close</button>
-// <textarea value={this.state.blurb} onChange={this.handleChange} rows="4" cols="40"></textarea>
+import { updateUserBlurb, UserBlurbs } from '../../api/ConversationsDbCollection';
+
 
 export default class Blurb extends React.Component{
   constructor(props) {
+    let currentBlurb = UserBlurbs.find({blurb: Meteor.user().blurb}).fetch();
+
+    if (currentBlurb[0] === undefined){
+      currentBlurb = 'Enter your blurb here';
+    }
+    else{
+      currentBlurb = currentBlurb[0].blurb;
+    }
     super(props);
+
     this.state = {
-      blurb: 'Enter your blurb here',
+      blurb: currentBlurb,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -18,10 +26,11 @@ export default class Blurb extends React.Component{
 
   handleChange(event) {
     this.setState({blurb: event.target.value});
-    updateUserBlurb(this.state.blurb);
+    
   }
 
   handleSubmit(event) {
+    updateUserBlurb(this.state.blurb);
     event.preventDefault();
 
   }
@@ -37,7 +46,7 @@ export default class Blurb extends React.Component{
               <div className='modal-body'>  
                   <div className='modal-text' id="modal-text"> Before you join this room...</div>
                   <div className='modal-text' id="modal-text" > Please enter a blurb about yourself below </div>
-                <form >
+                <form onSubmit={this.handleSubmit}>
                   <textarea type='text' value={this.state.blurb} onChange={this.handleChange} />
 
                 </form>

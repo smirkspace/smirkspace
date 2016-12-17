@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { Meteor } from 'meteor/meteor';
 import { } from 'meteor/templating';
 import Blaze from 'meteor/gadicc:blaze-react-component';
-import { Conversations, spaceGen } from '../../api/ConversationsDbCollection';
+import { Conversations, spaceGen, UserBlurbs } from '../../api/ConversationsDbCollection';
 import { } from '../SpaceButton/index';
 import { countHandler } from '../../api/CountersDbCollection';
 import '../../../client/styles/simpleChatStyleOverwrite.css';
@@ -14,6 +14,10 @@ export default function SpaceFrame() {
   Meteor.subscribe('simpleChats');
 
   const space = spaceGen();
+
+  const currentUserName = UserBlurbs.find({ username: Meteor.user().username }).fetch();
+
+  const displayName = currentUserName[0].displayName;
 
   // This function decrents the number of people in a
   // room and deletes room if 0 people are in them
@@ -30,7 +34,7 @@ export default function SpaceFrame() {
         // Display disconnect message
         if (rooms[i].user1 === Meteor.user().username) {
           const disconnectUser1Msg = {
-            message: `${rooms[i].user1} has left the chat. Click Next to talk to someone new!`,
+            message: `${displayName} has left the chat. Click Next to talk to someone new!`,
             roomId: space.toString(),
             username: 'Smirkspace',
             name: 'Smirkspace',
@@ -48,7 +52,7 @@ export default function SpaceFrame() {
           Conversations.update({ _id: rooms[i]._id }, { $unset: { user1: '' } });
         } else {
           const disconnectUser2Msg = {
-            message: `${rooms[i].user2} has left the chat. Click Next to talk to someone new!`,
+            message: `${displayName} has left the chat. Click Next to talk to someone new!`,
             roomId: space.toString(),
             username: 'Smirkspace',
             name: 'Smirkspace',
@@ -108,7 +112,7 @@ export default function SpaceFrame() {
     <div className="container">
       <div className="row">
         <div className="col-md-10 col-md-offset-1 title-div">
-          <div className="topic-title">You are now talking about {topic()}                                                                                                       <span className="glyphicon glyphicon-thumbs-up" /></div>
+          <div className="topic-title">You are now talking about {topic()}                                                                                                                           <span className="glyphicon glyphicon-thumbs-up" /></div>
         </div>
       </div>
       <div className="row">
@@ -120,7 +124,7 @@ export default function SpaceFrame() {
               <Link to={`/space/${topic()}`}><button className="btn btn-primary next-button" onClick={decrementRoomNum}><span className="glyphicon glyphicon-circle-arrow-right" /> Next</button></Link>
             </div>
             <div>
-              <Blaze template="SimpleChatWindow" roomId={space} username={Meteor.user().username} />
+              <Blaze template="SimpleChatWindow" roomId={space} username={Meteor.user().username} name={displayName} />
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ import SpaceFrame from '../imports/ui/SpaceFrame';
 import VerifyEmail from '../imports/ui/VerifyEmail';
 import ContactUs from '../imports/ui/ContactUs';
 import '../imports/startup/accounts-config';
-import { Conversations } from '../imports/api/ConversationsDbCollection';
+import { Conversations, UserBlurbs } from '../imports/api/ConversationsDbCollection';
 import { Button } from '../imports/ui/SpaceButton';
 
 // if the user is not logged in, redirect them to the splash page
@@ -39,6 +39,9 @@ Meteor.startup(() => {
   function decrementRoomNum() {
     // Check to see if the user is logged on
     if (Meteor.userId()) {
+      const currentUserName = UserBlurbs.find({ username: Meteor.user().username }).fetch();
+
+      const displayName = currentUserName[0].displayName;
       // Find all the documents in the 'simpleChats' collection that has the current logged on user
       const user1 = Conversations.find({ user1: Meteor.user().username }).fetch();
       const user2 = Conversations.find({ user2: Meteor.user().username }).fetch();
@@ -51,7 +54,7 @@ Meteor.startup(() => {
         // Display disconnect message
         if (users[k].user1 === Meteor.user().username) {
           const disconnectUser1Msg = {
-            message: `${users[k].user1} has left the chat. Click Next to talk to someone new!`,
+            message: `${displayName} has left the chat. Click Next to talk to someone new!`,
             roomId: users[k].Id.toString(),
             username: 'Smirkspace',
             name: 'Smirkspace',
@@ -69,7 +72,7 @@ Meteor.startup(() => {
           Conversations.update({ _id: users[k]._id }, { $unset: { user1: '' } });
         } else {
           const disconnectUser2Msg = {
-            message: `${users[k].user2} has left the chat. Click Next to talk to someone new!`,
+            message: `${displayName} has left the chat. Click Next to talk to someone new!`,
             roomId: users[k].Id.toString(),
             username: 'Smirkspace',
             name: 'Smirkspace',

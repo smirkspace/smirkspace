@@ -163,7 +163,7 @@ SimpleChat.configure({
 
   },
   limit: 500,
-  beep: true,
+  beep: false,
   showViewed: true,
   showReceived: true,
   showJoined: false,

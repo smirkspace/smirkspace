@@ -4,19 +4,20 @@ import { } from 'meteor/meteor';
 export const UserBlurbs = new Mongo.Collection('userblurbs');
 
 
-export function updateUserBlurb(myBlurb) {
+export function updateUserBlurb(myBlurb, myDisplayName) {
   const currentUserName = UserBlurbs.find({ username: Meteor.user().username }).fetch();
 
   if (currentUserName[0] === undefined) {
     UserBlurbs.insert({
       blurb: myBlurb,
       username: Meteor.user().username,
-
+      displayName: myDisplayName,
     });
   } else {
     UserBlurbs.update({ _id: currentUserName[0]._id }, {
       $set: {
         blurb: myBlurb,
+        displayName: myDisplayName,
       },
     });
   }
@@ -58,10 +59,10 @@ export function spaceGen() {
       Conversations.update({ _id: convo[i]._id },
         { $set: { NumberInRoom: 2, Available: false, user2: Meteor.user().username } });
       const msg = {
-        message: `${`Hi, I'm ${Meteor.user().username}!` + '<br>'}${blurb[0].blurb}`,
+        message: `${`Hi, I'm ${blurb[0].displayName}!` + '<br>'}${blurb[0].blurb}`,
         roomId: convo[i].Id.toString(),
         username: Meteor.user().username,
-        name: Meteor.user().username,
+        name: blurb[0].displayName,
         sent: !this.isSimulation,
         receivedBy: [],
         receivedAll: false,
@@ -98,10 +99,10 @@ export function spaceGen() {
   });
 
   const msg2 = {
-    message: `${`Hi, I'm ${Meteor.user().username}!` + '<br>'}${blurb[0].blurb}`,
+    message: `${`Hi, I'm ${blurb[0].displayName}!` + '<br>'}${blurb[0].blurb}`,
     roomId: instance.toString(),
     username: Meteor.user().username,
-    name: Meteor.user().username,
+    name: blurb[0].displayName,
     sent: !this.isSimulation,
     receivedBy: [],
     receivedAll: false,

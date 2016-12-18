@@ -15,7 +15,7 @@ export default function Navbar() {
             <span className="icon-bar" />
             <span className="icon-bar" />
           </button>
-          <Link to="/dashboard"><img alt="dashboard" src="images/logo2.png" width="140" height="100" /><h3 className="brandName">SmirkSpace</h3></Link>
+          <Link to="/dashboard"><img alt="dashboard" src="images/Logo1.svg.png" width="200" height="80" /><h3 className="brandName"></h3></Link>
         </div>
         <div className="collapse navbar-collapse lead" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav navbar-right">

@@ -137,3 +137,31 @@ export function resendVerif() {
   Meteor.call('resend');
   alert('Verification email resent. Please check your inbox.');
 }
+
+export function percentInSpace(buttonName) {
+  const convo = Conversations.find({}).fetch();
+  let allRooms = 0;
+  let spaceRooms = 0;
+
+  for (let i = 0; i < convo.length; i++) {
+    allRooms += convo[i].NumberInRoom;
+
+    if (convo[i].Category === buttonName) {
+      spaceRooms += convo[i].NumberInRoom;
+    }
+  }
+
+  if (allRooms === 0) {
+    return 'Population: Less than 10%';
+  }
+
+  const percent = (spaceRooms / allRooms) * 100;
+  console.log(percent);
+  if (percent > 90) {
+    return 'Population: Greater than 90%';
+  } else if (percent < 10) {
+    return 'Population: Less than 10%';
+  } else {
+    return `Population: ${percent}% of users`;
+  }
+}

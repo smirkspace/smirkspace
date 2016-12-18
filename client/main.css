@@ -229,6 +229,20 @@ modal-text{
     text-align: left;
 }
 
+.modalDiv{
+  text-align: center;
+}
 
+.population {
+  font-size: 15px;
+  position: relative;
+  width: 270px;
+  right: 42%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-
+.gridDiv {
+  position: relative;
+  width: 270px;
+}

@@ -6,8 +6,6 @@ import '../imports/api/CountersDbCollection';
 import { UserBlurbs } from '../imports/api/ConversationsDbCollection';
 
 
-
-
 SimpleChat.configure({
   texts: {
     loadMore: 'Load More',
@@ -19,7 +17,7 @@ SimpleChat.configure({
 
   },
   limit: 500,
-  beep: true,
+  beep: false,
   showViewed: true,
   showReceived: true,
   showJoined: false,
@@ -63,14 +61,10 @@ Accounts.config({
   sendVerificationEmail: false,
 });
 
-Meteor.publish('users', function() {
-    return Meteor.users.find({}, {fields: {accountType: 1}});
-});
-
+Meteor.publish('users', () => Meteor.users.find({}, { fields: { accountType: 1 } }));
 
 
 Meteor.startup(() => {
-
   // Meteor.users.update({_id: Meteor.userId()}, {$set : {"profile.blurb": "Some Blurb"} });
 
   // code to run on server at startup

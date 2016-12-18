@@ -11,8 +11,8 @@ export default class Blurb extends React.Component {
     let currentDisplayName;
 
     if (findUserBlurb[0] === undefined) {
-      currentBlurb = 'Enter your blurb here';
-      currentDisplayName = 'Enter a chat name here';
+      // currentBlurb = 'Enter your blurb here';
+      // currentDisplayName = 'Enter a chat name here';
     } else {
       currentBlurb = findUserBlurb[0].blurb;
       currentDisplayName = findUserBlurb[0].displayName;
@@ -48,7 +48,7 @@ export default class Blurb extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="modalDiv">
         <div className="modal-header">
           <div className="modal-title">
             <div className="modal-text"> Hello, {this.props.name}!</div>
@@ -59,10 +59,10 @@ export default class Blurb extends React.Component {
           <div className="modal-text" id="modal-text" > Please enter a Chat Name and a Blurb about yourself below </div>
           <form >
             Chat Name: <br />
-            <input type="text" value={this.state.displayName} onChange={this.handleChange('displayName')} />
+            <input type="text" placeholder="Enter a chat name here" value={this.state.displayName} onChange={this.handleChange('displayName')} />
             <br /> <br />
             Blurb: <br />
-            <textarea type="text" value={this.state.blurb} onChange={this.handleChange('blurb')} />
+            <textarea type="text" placeholder="Enter your blurb here" value={this.state.blurb} onChange={this.handleChange('blurb')} />
           </form>
         </div>
       </div>

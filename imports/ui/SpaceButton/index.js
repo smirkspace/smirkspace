@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import './index.css';
 import { countHandler } from '../../api/CountersDbCollection';
+import { percentInSpace } from '../../api/ConversationsDbCollection';
 // <Link to={'/space/' + props.buttonName}>
 
 export default function Button(props) {
@@ -21,11 +22,17 @@ export default function Button(props) {
     alert('This space is still being developed.\nCheck back soon!');
   }
 
+  function findPercent() {
+    return percentInSpace(props.buttonName);
+  }
+
   const buttonType = props.spaceIsDeployed
   ? (
     <input type="image" className="spaceButton" src={props.source} onClick={openModal} />
     )
-  : <input type="image" className="spaceButton" src={props.source} onClick={spaceNotAvailable} />;
+  : (
+    <input type="image" className="spaceButton" src={props.source} onClick={spaceNotAvailable} />
+    );
 
   return buttonType;
 }

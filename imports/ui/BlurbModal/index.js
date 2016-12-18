@@ -36,7 +36,7 @@ export default class Blurb extends React.Component {
     return function (e) {
       const state = {};
       state[key] = e.target.value;
-      this.setState(state);
+      this.setState(state, this.handleSubmit);
       updateUserBlurb(this.state.blurb, this.state.displayName);
     }.bind(this);
   }

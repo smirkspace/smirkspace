@@ -42,7 +42,7 @@ Bridget Rassell [bridget.rassell@gmail.com]
  
  [Our Wiki](https://github.com/smirkspace/smirkspace/wiki)
  
- ## License ##
+## License ##
  
  This project is licensed under the Apache version 2.0
   

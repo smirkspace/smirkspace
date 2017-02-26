@@ -16,7 +16,7 @@ Kolby Chapman [kol_j@hotmail.com]
 
 Madeline Petersen [madpeter@uvic.ca]
 
-Omnielle Halton [om.halton@gmail.com]
+HaltonO [sumari@uvic.ca]
 
 Tim Baker [tbakerx@gmail.com]
 

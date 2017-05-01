@@ -21,7 +21,7 @@ export default function AboutUs() {
         <tr>
           <td><img width="200" height="200" src="/images/tim.png" /><p>Tim Baker</p></td>
           <td><img width="200" height="200" src="/images/madd.png" /><p>Madeline Petersen</p></td>
-          <td><img width="200" height="200" src="/images/om.png" /><p>Omnielle Halton</p></td>
+          <td><img width="200" height="200" src="/images/om.png" /><p>Halton .O</p></td>
         </tr>
         <tr>
           <td><img width="200" height="200" src="/images/dah.png" /><p>Dahv Reinhart</p></td>
